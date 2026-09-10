@@ -89,15 +89,13 @@
 
 ### 📊 GitHub Activity & Statistics
 <div align="center">
-  <img width="98%" src="https://github-readme-activity-graph.vercel.app/graph?username=Dhrumil1411&theme=tokyo-night&hide_border=true&area=true" alt="Dhrumil's GitHub Activity Graph" />
-</div>
-<br/>
-<div align="center">
   <img src="https://streak-stats.demolab.com/?user=Dhrumil1411&theme=tokyonight&hide_border=true" alt="GitHub Streak" />
 </div>
 <br/>
 <div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=Dhrumil1411&theme=tokyonight&no-frame=true&no-bg=true&margin-w=4" alt="GitHub Trophies" />
+  <img src="https://img.shields.io/badge/Total%20Contributions-170+-38BDF8?style=for-the-badge&logo=github&logoColor=white" alt="Contributions" />
+  <img src="https://img.shields.io/badge/Public%20Repositories-11-818CF8?style=for-the-badge&logo=git&logoColor=white" alt="Repositories" />
+  <img src="https://img.shields.io/badge/Developer%20Status-Active%20Builder-34D399?style=for-the-badge&logo=visualstudiocode&logoColor=white" alt="Status" />
 </div>
 
 ---
