@@ -88,14 +88,16 @@
 ---
 
 ### 📊 GitHub Activity & Statistics
-
 <div align="center">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=Dhrumil1411&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&hide_border=true" alt="Dhrumil's GitHub stats" />
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Dhrumil1411&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages" />
+  <img width="98%" src="https://github-readme-activity-graph.vercel.app/graph?username=Dhrumil1411&theme=tokyo-night&hide_border=true&area=true" alt="Dhrumil's GitHub Activity Graph" />
 </div>
-
+<br/>
 <div align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Dhrumil1411&theme=tokyonight&hide_border=true" alt="GitHub Streak" />
+  <img src="https://streak-stats.demolab.com/?user=Dhrumil1411&theme=tokyonight&hide_border=true" alt="GitHub Streak" />
+</div>
+<br/>
+<div align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=Dhrumil1411&theme=tokyonight&no-frame=true&no-bg=true&margin-w=4" alt="GitHub Trophies" />
 </div>
 
 ---
