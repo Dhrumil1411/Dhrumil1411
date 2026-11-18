@@ -6,19 +6,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Primary Meta Tags -->
-  <title>Dhrumil Dashadia — Developer Portfolio // Architectural Blueprint Interface</title>
-  <meta name="title" content="Dhrumil Dashadia — Developer Portfolio // Architectural Blueprint Interface" />
+  <title>Dhrumil Dashadia — Full-Stack Developer Portfolio // Architectural Blueprint Interface</title>
+  <meta name="title" content="Dhrumil Dashadia — Full-Stack Developer Portfolio // Architectural Blueprint Interface" />
   <meta name="description"
-    content="Personal developer portfolio of Dhrumil Dashadia. Student Developer &amp; Aspiring Software Engineer building AI, Computer Vision, Real-Time Web Systems, and Mobile Applications. Designed with the CHIP &amp; FRAME architectural blueprint aesthetic." />
+    content="Personal developer portfolio of Dhrumil Dashadia. 2nd-year B.Tech CSE student at KL University and Full-Stack Developer building responsive web applications and practical software solutions. Designed with the CHIP &amp; FRAME architectural blueprint aesthetic." />
   <meta name="keywords"
-    content="Dhrumil Dashadia, Software Developer, Full-Stack Developer, AI, Computer Vision, FastAPI, React 19, Flutter, OpenCV, Python, India Developer, Portfolio" />
+    content="Dhrumil Dashadia, Full-Stack Developer, Software Developer, KL University, Darshan University, Web Development, React, FastAPI, Node.js, Python, India Developer, Portfolio" />
   <meta name="author" content="Dhrumil Dashadia" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Dhrumil Dashadia — Developer Portfolio" />
+  <meta property="og:title" content="Dhrumil Dashadia — Full-Stack Developer Portfolio" />
   <meta property="og:description"
-    content="Student Developer &amp; Aspiring Software Engineer building AI, Computer Vision, Real-Time Web Systems, and Mobile Applications." />
+    content="2nd-year B.Tech CSE student at KL University and Full-Stack Developer building responsive web applications and practical software solutions." />
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1473,6 +1473,21 @@
       margin-bottom: 16px;
     }
 
+    .hero-headline {
+      font-size: clamp(2.35rem, 5.2vw, 4.4rem);
+      line-height: 0.96;
+      letter-spacing: 0.02em;
+      color: var(--bp-ink);
+      margin-bottom: 18px;
+    }
+
+    @media (max-width: 640px) {
+      .hero-headline {
+        font-size: clamp(1.85rem, 7.8vw, 2.5rem);
+        line-height: 1.0;
+      }
+    }
+
     .hero-role-title {
       font-size: 0.85rem;
       font-weight: 800;
@@ -1832,6 +1847,176 @@
       font-size: 0.88rem;
       font-weight: 800;
       color: #FAF9F5;
+    }
+
+        /* ---- components/Services/Services.css ---- */
+    .services-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      margin-top: 24px;
+    }
+
+    @media (min-width: 960px) {
+      .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .service-card {
+      padding: 30px 24px;
+      background-color: var(--bp-bg-card);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 18px;
+      height: 100%;
+    }
+
+    @media (min-width: 768px) {
+      .service-card {
+        padding: 34px 28px;
+      }
+    }
+
+    .service-card-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      border-bottom: 2px solid var(--bp-ink);
+      padding-bottom: 12px;
+    }
+
+    .service-badge {
+      background-color: var(--bp-ink);
+      color: var(--bp-bg);
+      padding: 3px 10px;
+      letter-spacing: 0.06em;
+    }
+
+    .service-status {
+      font-size: 0.72rem;
+      letter-spacing: 0.06em;
+    }
+
+    .service-body {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      flex-grow: 1;
+    }
+
+    .service-title {
+      font-size: clamp(1.85rem, 2.6vw, 2.35rem);
+      line-height: 0.95;
+      color: var(--bp-ink);
+      letter-spacing: 0.02em;
+    }
+
+    .service-tagline {
+      font-size: 0.78rem;
+      font-weight: 800;
+      color: var(--bp-accent-blue);
+      letter-spacing: 0.04em;
+    }
+
+    .service-desc {
+      font-size: 0.88rem;
+      line-height: 1.55;
+      color: var(--bp-ink);
+    }
+
+    .service-capabilities-block {
+      background-color: var(--bp-bg);
+      border: 1.5px solid var(--bp-ink);
+      padding: 14px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 4px;
+    }
+
+    .service-cap-heading {
+      font-size: 0.68rem;
+      font-weight: 800;
+      color: var(--bp-ink-muted);
+      letter-spacing: 0.08em;
+      border-bottom: 1px dashed var(--bp-ink-muted);
+      padding-bottom: 6px;
+      margin-bottom: 2px;
+    }
+
+    .service-cap-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .service-cap-item {
+      font-size: 0.78rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      line-height: 1.35;
+    }
+
+    .service-cap-bullet {
+      color: var(--bp-accent-blue);
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+
+    .service-footer {
+      border-top: 1px dashed var(--bp-ink-muted);
+      padding-top: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .service-tech-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .service-tech-pill {
+      font-size: 0.68rem;
+      font-weight: 700;
+      background: var(--bp-bg-secondary);
+      border: 1px solid var(--bp-ink-light);
+      padding: 2px 7px;
+      color: var(--bp-ink);
+    }
+
+    .service-action-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      background: transparent;
+      border: 1.5px solid var(--bp-ink);
+      color: var(--bp-ink);
+      font-size: 0.76rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      padding: 9px 12px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color var(--transition-fast), color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+    }
+
+    .service-action-btn:hover {
+      background-color: var(--bp-ink);
+      color: var(--bp-bg);
+      transform: translate(-1px, -1px);
+      box-shadow: 2px 2px 0px var(--bp-accent-blue);
     }
 
     /* ---- components/Projects/ProjectModal.css ---- */
@@ -4056,6 +4241,14 @@
       background: var(--bp-accent-blue);
     }
 
+    .dossier-grid>div:nth-child(3)::before {
+      background: var(--bp-ink-muted);
+    }
+
+    .edu-badge-prev {
+      background-color: var(--bp-ink-muted) !important;
+    }
+
     .dossier-grid>div::after {
       content: '';
       position: absolute;
@@ -4246,7 +4439,8 @@
       .exp-project-link,
       .hero-social-link,
       .nav-link-tech,
-      .mobile-nav-item {
+      .mobile-nav-item,
+      .service-action-btn {
         transition: none !important;
         transform: none !important;
         filter: none !important;
@@ -4293,7 +4487,7 @@
             <div class="telemetry-item" data-step="2"><span class="telemetry-pip">○</span><span>02 // COMPILING SYSTEM
                 CODEBASES</span></div>
             <div class="telemetry-item" data-step="3"><span class="telemetry-pip">○</span><span>03 // DOSSIER READY
-                (CH.01 — CH.06)</span></div>
+                (CH.01 — CH.07)</span></div>
           </div>
         </div>
       </div>
@@ -4324,7 +4518,7 @@
 
         <div class="header-chapter-indicator font-mono" aria-live="polite">
           <div class="chapter-indicator-box">
-            <span class="chapter-indicator-num text-accent-blue" id="indNum">01 / 06</span>
+            <span class="chapter-indicator-num text-accent-blue" id="indNum">01 / 07</span>
             <span class="chapter-indicator-sep">—</span>
             <span class="chapter-indicator-title" id="indTitle">INTRODUCTION</span>
           </div>
@@ -4335,7 +4529,7 @@
 
           <div class="mobile-chapter-pill font-mono">
             <span class="text-accent-blue font-bold" id="mobNum">01</span>
-            <span class="text-ink-muted">/06</span>
+            <span class="text-ink-muted">/07</span>
           </div>
 
           <button class="mobile-hamburger-btn" id="hamburger" aria-expanded="false" aria-label="Toggle mobile menu">
@@ -4352,7 +4546,7 @@
       <div class="ruler-head">
         <button class="ruler-step-btn" id="rulerPrev" aria-label="Previous Chapter"
           title="Previous Chapter [↑]">▲</button>
-        <div class="ruler-axis-tag"><span class="ruler-cross">+</span><span class="ruler-axis-label">CH.06</span></div>
+        <div class="ruler-axis-tag"><span class="ruler-cross">+</span><span class="ruler-axis-label">CH.07</span></div>
       </div>
 
       <div class="ruler-track">
@@ -4391,40 +4585,38 @@
             </div>
 
             <div class="hero-content">
-              <div class="hero-label font-mono">// CHAPTER_01 • PERSONAL DEVELOPER PORTFOLIO</div>
+              <div class="hero-label font-mono">// CHAPTER_01 • DHRUMIL DASHADIA // DEVELOPER PORTFOLIO</div>
 
-              <h1 class="hero-name font-display">
-                <span data-split-text="DHRUMIL" aria-label="DHRUMIL">DHRUMIL</span> <br />
-                <span class="highlight-box"><span data-split-text="DASHADIA"
-                    aria-label="DASHADIA">DASHADIA</span></span>
+              <h1 class="hero-name hero-headline font-display">
+                <span data-split-text="I BUILD WEB APPLICATIONS" aria-label="I BUILD WEB APPLICATIONS">I BUILD WEB APPLICATIONS</span> <br />
+                <span class="highlight-box"><span data-split-text="THAT SOLVE REAL PROBLEMS."
+                    aria-label="THAT SOLVE REAL PROBLEMS.">THAT SOLVE REAL PROBLEMS.</span></span>
               </h1>
 
-              <div class="hero-role-title font-mono">STUDENT DEVELOPER / ASPIRING SOFTWARE DEVELOPER</div>
+              <div class="hero-role-title font-mono">DHRUMIL DASHADIA // FULL-STACK DEVELOPER • 2ND-YEAR B.TECH CSE (KL UNIVERSITY)</div>
 
-              <p class="hero-intro-text">Student developer passionate about engineering intelligent full-stack
-                applications, computer vision pipelines, and real-time systems. Focused on clean architecture, practical
-                problem-solving, and continuous learning.</p>
+              <p class="hero-intro-text">Full-Stack Developer focused on building responsive websites, web applications, and practical software solutions using modern frontend and backend technologies.</p>
 
               <div class="hero-actions">
                 <div class="magnet-wrap" data-magnet data-strength="2.5" data-padding="60" data-max-offset="12">
                   <div class="magnet-inner">
-                    <button class="btn-blueprint-cta" data-goto="projects"><span>VIEW PROJECTS</span><span
+                    <button class="btn-blueprint-cta" data-goto="projects"><span>VIEW MY WORK</span><span
                         class="cta-arrow">&rarr;</span></button>
                   </div>
                 </div>
                 <div class="magnet-wrap" data-magnet data-strength="2.5" data-padding="60" data-max-offset="12">
                   <div class="magnet-inner">
-                    <button class="btn-blueprint-secondary" data-goto="contact"><span>CONTACT ME</span></button>
+                    <button class="btn-blueprint-secondary" data-goto="contact"><span>HIRE ME / CONTACT</span></button>
                   </div>
                 </div>
               </div>
 
               <div class="hero-social-strip font-mono">
                 <span class="social-lead">VERIFIED CHANNELS:</span>
-                <a href="https://github.com/Dhrumil1411" target="_blank" rel="noreferrer"
+                <a href="https://github.com/Dhrumil1411" target="_blank" rel="noopener noreferrer"
                   class="hero-social-link">GITHUB ↗</a>
                 <span class="social-divider">/</span>
-                <a href="https://www.linkedin.com/in/dhrumil-dashadia-43903a30a/" target="_blank" rel="noreferrer"
+                <a href="https://www.linkedin.com/in/dhrumil-dashadia-43903a30a/" target="_blank" rel="noopener noreferrer"
                   class="hero-social-link">LINKEDIN ↗</a>
                 <span class="social-divider">/</span>
                 <a href="mailto:dhrumildashadia@gmail.com" class="hero-social-link">EMAIL ↗</a>
@@ -4442,7 +4634,7 @@
       <div class="chapter-divider-wrap font-mono" aria-hidden="true">
         <div class="chapter-divider-line left"></div>
         <div class="chapter-divider-badge">
-          <span class="chapter-num text-accent-blue font-bold">CH.02 / 06</span><span class="chapter-sep">::</span><span
+          <span class="chapter-num text-accent-blue font-bold">CH.02 / 07</span><span class="chapter-sep">::</span><span
             class="chapter-name">BIOGRAPHY &amp; PROFILE</span><span class="chapter-cross">+</span>
         </div>
         <div class="chapter-divider-line right"></div>
@@ -4465,21 +4657,21 @@
           <div>
             <div class="chamfer-card about-card">
               <div class="about-inner">
-                <div class="scroll-reveal about-narrative"><span class="scroll-reveal-inner">I am an aspiring software
-                    developer with a background in Computer Engineering based in India. I enjoy building practical
-                    software that solves real problems — from clinical decision support tools and computer vision
-                    pipelines to real-time web applications. My focus is on writing clean, maintainable code and
-                    continuously learning modern full-stack architectures.</span></div>
+                <div class="scroll-reveal about-narrative"><span class="scroll-reveal-inner">I am a 2nd-year Computer Science and Engineering (CSE) student at KL University in India, having previously completed a Diploma in Computer Engineering at Darshan University. I enjoy building practical software and solving technical problems across frontend and backend environments. My interests center on full-stack development, responsive web applications, and exploring AI-powered software systems. With previous web development internship experience, my focus is on writing clean, maintainable code and delivering dependable, real-world solutions.</span></div>
 
                 <div class="about-specs-grid font-mono">
-                  <div class="about-spec-item"><span class="spec-item-label">BACKGROUND</span><span
-                      class="spec-item-value">Diploma in Computer Engineering</span></div>
-                  <div class="about-spec-item"><span class="spec-item-label">STATUS</span><span
-                      class="spec-item-value text-accent-blue">Advanced Engineering Student</span></div>
+                  <div class="about-spec-item"><span class="spec-item-label">CURRENT STATUS</span><span
+                      class="spec-item-value text-accent-blue">2nd-Year B.Tech (CSE)</span></div>
+                  <div class="about-spec-item"><span class="spec-item-label">CURRENT UNIVERSITY</span><span
+                      class="spec-item-value">KL University</span></div>
+                  <div class="about-spec-item"><span class="spec-item-label">PREV. QUALIFICATION</span><span
+                      class="spec-item-value">Diploma in Computer Engg</span></div>
+                  <div class="about-spec-item"><span class="spec-item-label">PREV. UNIVERSITY</span><span
+                      class="spec-item-value">Darshan University</span></div>
                   <div class="about-spec-item"><span class="spec-item-label">LOCATION</span><span
                       class="spec-item-value">India</span></div>
-                  <div class="about-spec-item"><span class="spec-item-label">DOC REF</span><span
-                      class="spec-item-value">DWG: DD-2026</span></div>
+                  <div class="about-spec-item"><span class="spec-item-label">FIELD FOCUS</span><span
+                      class="spec-item-value">Full-Stack &amp; Web Apps</span></div>
                 </div>
 
                 <!-- GitHub contribution heatmap (rendered by JS) -->
@@ -4496,20 +4688,168 @@
       <div class="chapter-divider-wrap font-mono" aria-hidden="true">
         <div class="chapter-divider-line left"></div>
         <div class="chapter-divider-badge">
-          <span class="chapter-num text-accent-blue font-bold">CH.03 / 06</span><span class="chapter-sep">::</span><span
+          <span class="chapter-num text-accent-blue font-bold">CH.03 / 07</span><span class="chapter-sep">::</span><span
+            class="chapter-name">SERVICES &amp; SOLUTIONS</span><span class="chapter-cross">+</span>
+        </div>
+        <div class="chapter-divider-line right"></div>
+      </div>
+
+      <!-- ============ CHAPTER 03 — SERVICES ============ -->
+      <section id="services-wrap" class="chapter-section-wrap" aria-label="Chapter 03: Services">
+        <div class="section-cad-mark top-left" aria-hidden="true">+</div>
+        <div class="section-cad-mark top-right" aria-hidden="true">+</div>
+
+        <section id="services" class="portfolio-section" aria-label="Services &amp; Capabilities">
+          <div class="section-header-block">
+            <div class="section-pre-title font-mono"><span>// CHAPTER_03</span><span>•</span><span>SERVICES</span></div>
+            <div class="section-title-wrap">
+              <h2 class="section-main-title font-display">SERVICES &amp; CAPABILITIES</h2>
+              <div class="section-meta-tag font-mono">CLIENT SOLUTIONS</div>
+            </div>
+          </div>
+
+          <div class="services-grid">
+            <!-- Service 01: Website Development -->
+            <div data-ac data-distance="20" data-delay="0" data-duration="0.65">
+              <div class="chamfer-card service-card">
+                <div class="service-card-head font-mono">
+                  <span class="service-badge">01 // FRONTEND</span>
+                  <span class="service-status text-accent-blue font-bold">AVAILABLE</span>
+                </div>
+
+                <div class="service-body">
+                  <h3 class="service-title font-display">WEBSITE DEVELOPMENT</h3>
+                  <div class="service-tagline font-mono">RESPONSIVE &amp; MODERN WEB EXPERIENCES</div>
+                  <p class="service-desc">Custom, responsive, and performance-driven websites crafted to establish a strong online presence. Focused on intuitive UI, fast load times, and cross-device responsiveness.</p>
+
+                  <div class="service-capabilities-block font-mono">
+                    <div class="service-cap-heading">DELIVERABLES &amp; CAPABILITIES</div>
+                    <ul class="service-cap-list">
+                      <li class="service-cap-item"><span class="service-cap-bullet">+</span><span>Responsive business websites</span></li>
+                      <li class="service-cap-item"><span class="service-cap-bullet">+</span><span>Portfolio websites</span></li>
+                      <li class="service-cap-item"><span class="service-cap-bullet">+</span><span>Landing pages</span></li>
+                      <li class="service-cap-item"><span class="service-cap-bullet">+</span><span>Frontend development</span></li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="service-footer font-mono">
+                  <div class="service-tech-strip">
+                    <span class="service-tech-pill">React</span>
+                    <span class="service-tech-pill">JavaScript</span>
+                    <span class="service-tech-pill">Tailwind CSS</span>
+                    <span class="service-tech-pill">HTML5/CSS3</span>
+                  </div>
+                  <button class="service-action-btn font-mono" data-goto="contact">
+                    <span>INQUIRE ABOUT WEBSITES</span>
+                    <span>&rarr;</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Service 02: Full-Stack Web Development -->
+            <div data-ac data-distance="20" data-delay="0.1" data-duration="0.65">
+              <div class="chamfer-card service-card">
+                <div class="service-card-head font-mono">
+                  <span class="service-badge">02 // FULL-STACK</span>
+                  <span class="service-status text-accent-blue font-bold">AVAILABLE</span>
+                </div>
+
+                <div class="service-body">
+                  <h3 class="service-title font-display">FULL-STACK WEB DEVELOPMENT</h3>
+                  <div class="service-tagline font-mono">END-TO-END DYNAMIC APPLICATIONS</div>
+                  <p class="service-desc">Complete web applications with interactive client interfaces, structured backend architecture, secure authentication, and seamless database integration.</p>
+
+                  <div class="service-capabilities-block font-mono">
+                    <div class="service-cap-heading">DELIVERABLES &amp; CAPABILITIES</div>
+                    <ul class="service-cap-list">
+                      <li class="service-cap-item"><span class="service-cap-bullet">+</span><span>Web application development</span></li>
+                      <li class="service-cap-item"><span class="service-cap-bullet">+</span><span>REST API integration</span></li>
+                      <li class="service-cap-item"><span class="service-cap-bullet">+</span><span>Authentication systems</span></li>
+                      <li class="service-cap-item"><span class="service-cap-bullet">+</span><span>Database integration</span></li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="service-footer font-mono">
+                  <div class="service-tech-strip">
+                    <span class="service-tech-pill">React</span>
+                    <span class="service-tech-pill">FastAPI</span>
+                    <span class="service-tech-pill">Node.js</span>
+                    <span class="service-tech-pill">PostgreSQL</span>
+                    <span class="service-tech-pill">Firebase</span>
+                  </div>
+                  <button class="service-action-btn font-mono" data-goto="contact">
+                    <span>INQUIRE ABOUT APPS</span>
+                    <span>&rarr;</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Service 03: Website Fixes and Improvements -->
+            <div data-ac data-distance="20" data-delay="0.2" data-duration="0.65">
+              <div class="chamfer-card service-card">
+                <div class="service-card-head font-mono">
+                  <span class="service-badge">03 // MAINTENANCE</span>
+                  <span class="service-status text-accent-blue font-bold">AVAILABLE</span>
+                </div>
+
+                <div class="service-body">
+                  <h3 class="service-title font-display">WEBSITE FIXES &amp; IMPROVEMENTS</h3>
+                  <div class="service-tagline font-mono">DEBUGGING, REFINEMENT &amp; OPTIMIZATION</div>
+                  <p class="service-desc">Targeted fixes, UI polish, and functional upgrades for existing sites. From layout responsiveness and bug hunting to API troubleshooting and maintenance.</p>
+
+                  <div class="service-capabilities-block font-mono">
+                    <div class="service-cap-heading">DELIVERABLES &amp; CAPABILITIES</div>
+                    <ul class="service-cap-list">
+                      <li class="service-cap-item"><span class="service-cap-bullet">+</span><span>Bug fixing</span></li>
+                      <li class="service-cap-item"><span class="service-cap-bullet">+</span><span>UI improvements</span></li>
+                      <li class="service-cap-item"><span class="service-cap-bullet">+</span><span>Existing website maintenance</span></li>
+                      <li class="service-cap-item"><span class="service-cap-bullet">+</span><span>API integration and debugging</span></li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="service-footer font-mono">
+                  <div class="service-tech-strip">
+                    <span class="service-tech-pill">Bug Fixing</span>
+                    <span class="service-tech-pill">UI Polish</span>
+                    <span class="service-tech-pill">API Debugging</span>
+                    <span class="service-tech-pill">Maintenance</span>
+                  </div>
+                  <button class="service-action-btn font-mono" data-goto="contact">
+                    <span>INQUIRE ABOUT FIXES</span>
+                    <span>&rarr;</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="section-cad-mark bottom-left" aria-hidden="true">+</div>
+        <div class="section-cad-mark bottom-right" aria-hidden="true">+</div>
+      </section>
+
+      <div class="chapter-divider-wrap font-mono" aria-hidden="true">
+        <div class="chapter-divider-line left"></div>
+        <div class="chapter-divider-badge">
+          <span class="chapter-num text-accent-blue font-bold">CH.04 / 07</span><span class="chapter-sep">::</span><span
             class="chapter-name">SELECTED PROJECTS</span><span class="chapter-cross">+</span>
         </div>
         <div class="chapter-divider-line right"></div>
       </div>
 
-      <!-- ============ CHAPTER 03 — PROJECTS ============ -->
-      <section id="projects-wrap" class="chapter-section-wrap" aria-label="Chapter 03: Projects">
+      <!-- ============ CHAPTER 04 — PROJECTS ============ -->
+      <section id="projects-wrap" class="chapter-section-wrap" aria-label="Chapter 04: Projects">
         <div class="section-cad-mark top-left" aria-hidden="true">+</div>
         <div class="section-cad-mark top-right" aria-hidden="true">+</div>
 
         <section id="projects" class="portfolio-section" aria-label="Featured Projects">
           <div class="section-header-block">
-            <div class="section-pre-title font-mono"><span>// CHAPTER_03</span><span>•</span><span>CURATED WORK</span>
+            <div class="section-pre-title font-mono"><span>// CHAPTER_04</span><span>•</span><span>CURATED WORK</span>
             </div>
             <div class="section-title-wrap">
               <h2 class="section-main-title font-display">FEATURED PROJECTS</h2>
@@ -4527,20 +4867,20 @@
       <div class="chapter-divider-wrap font-mono" aria-hidden="true">
         <div class="chapter-divider-line left"></div>
         <div class="chapter-divider-badge">
-          <span class="chapter-num text-accent-blue font-bold">CH.04 / 06</span><span class="chapter-sep">::</span><span
+          <span class="chapter-num text-accent-blue font-bold">CH.05 / 07</span><span class="chapter-sep">::</span><span
             class="chapter-name">TECHNICAL ARSENAL</span><span class="chapter-cross">+</span>
         </div>
         <div class="chapter-divider-line right"></div>
       </div>
 
-      <!-- ============ CHAPTER 04 — SKILLS ============ -->
-      <section id="skills-wrap" class="chapter-section-wrap" aria-label="Chapter 04: Technical Skills">
+      <!-- ============ CHAPTER 05 — SKILLS ============ -->
+      <section id="skills-wrap" class="chapter-section-wrap" aria-label="Chapter 05: Technical Skills">
         <div class="section-cad-mark top-left" aria-hidden="true">+</div>
         <div class="section-cad-mark top-right" aria-hidden="true">+</div>
 
         <section id="skills" class="portfolio-section" aria-label="Skills">
           <div class="section-header-block">
-            <div class="section-pre-title font-mono"><span>// CHAPTER_04</span><span>•</span><span>TECHNICAL
+            <div class="section-pre-title font-mono"><span>// CHAPTER_05</span><span>•</span><span>TECHNICAL
                 ARSENAL</span></div>
             <div class="section-title-wrap">
               <h2 class="section-main-title font-display">SKILLS &amp; TECHNOLOGIES</h2>
@@ -4558,20 +4898,20 @@
       <div class="chapter-divider-wrap font-mono" aria-hidden="true">
         <div class="chapter-divider-line left"></div>
         <div class="chapter-divider-badge">
-          <span class="chapter-num text-accent-blue font-bold">CH.05 / 06</span><span class="chapter-sep">::</span><span
+          <span class="chapter-num text-accent-blue font-bold">CH.06 / 07</span><span class="chapter-sep">::</span><span
             class="chapter-name">CAREER &amp; ACADEMIC RECORD</span><span class="chapter-cross">+</span>
         </div>
         <div class="chapter-divider-line right"></div>
       </div>
 
-      <!-- ============ CHAPTER 05 — EXPERIENCE & EDUCATION ============ -->
-      <section id="experience-wrap" class="chapter-section-wrap" aria-label="Chapter 05: Experience &amp; Education">
+      <!-- ============ CHAPTER 06 — EXPERIENCE & EDUCATION ============ -->
+      <section id="experience-wrap" class="chapter-section-wrap" aria-label="Chapter 06: Experience &amp; Education">
         <div class="section-cad-mark top-left" aria-hidden="true">+</div>
         <div class="section-cad-mark top-right" aria-hidden="true">+</div>
 
         <section id="experience" class="portfolio-section" aria-label="Experience &amp; Education">
           <div class="section-header-block">
-            <div class="section-pre-title font-mono"><span>// CHAPTER_05</span><span>•</span><span>CAREER &amp; ACADEMIC
+            <div class="section-pre-title font-mono"><span>// CHAPTER_06</span><span>•</span><span>CAREER &amp; ACADEMIC
                 DOSSIER</span></div>
             <div class="section-title-wrap">
               <h2 class="section-main-title font-display">EXPERIENCE &amp; EDUCATION</h2>
@@ -4588,7 +4928,7 @@
                     <span class="exp-duration text-ink-muted">14 May 2024 – 08 June 2024</span>
                   </div>
                   <div class="dossier-action">
-                    <a href="certificate.pdf" target="_blank" rel="noreferrer" class="cert-link font-mono"
+                    <a href="certificate.pdf" target="_blank" rel="noopener noreferrer" class="cert-link font-mono"
                       title="Open internship certificate in a new tab">[VIEW CERTIFICATE ↗]</a>
                   </div>
                 </div>
@@ -4623,24 +4963,47 @@
               <div class="chamfer-card dossier-card education-card">
                 <div class="dossier-card-head font-mono">
                   <div class="dossier-badge-wrap">
-                    <span class="edu-badge">02 // ACADEMIC RECORD</span>
+                    <span class="edu-badge">02 // CURRENT EDUCATION</span>
                     <span class="edu-location text-ink-muted">LOCATION: INDIA</span>
                   </div>
-                  <div class="dossier-action font-mono text-accent-blue font-bold">VERIFIED</div>
+                  <div class="dossier-action font-mono text-accent-blue font-bold">STATUS: PURSUING</div>
+                </div>
+
+                <div class="edu-body">
+                  <h3 class="edu-degree font-display">B.TECH IN COMPUTER SCIENCE AND ENGINEERING</h3>
+                  <div class="edu-status font-mono text-accent-blue">2ND-YEAR UNDERGRADUATE STUDENT • KL UNIVERSITY</div>
+
+                  <div class="edu-specs-block font-mono">
+                    <div class="edu-spec-row"><span class="spec-label">DEGREE:</span><span class="spec-val">Bachelor of Technology (B.Tech)</span></div>
+                    <div class="edu-spec-row"><span class="spec-label">DISCIPLINE:</span><span class="spec-val">Computer Science and Engineering (CSE)</span></div>
+                    <div class="edu-spec-row"><span class="spec-label">UNIVERSITY:</span><span class="spec-val">KL University</span></div>
+                    <div class="edu-spec-row"><span class="spec-label">CURRENT STATUS:</span><span class="spec-val">2nd-Year Student</span></div>
+                    <div class="edu-spec-row"><span class="spec-label">CURRICULUM:</span><span class="spec-val">Full-stack web architecture, data structures, algorithms, and practical software design.</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Previous Qualification: Completed Diploma -->
+            <div data-ac data-distance="20" data-delay="0.2" data-duration="0.65">
+              <div class="chamfer-card dossier-card education-card">
+                <div class="dossier-card-head font-mono">
+                  <div class="dossier-badge-wrap">
+                    <span class="edu-badge edu-badge-prev">03 // PREVIOUS QUALIFICATION</span>
+                    <span class="edu-location text-ink-muted">LOCATION: INDIA</span>
+                  </div>
+                  <div class="dossier-action font-mono text-ink-muted font-bold">STATUS: COMPLETED</div>
                 </div>
 
                 <div class="edu-body">
                   <h3 class="edu-degree font-display">DIPLOMA IN COMPUTER ENGINEERING</h3>
-                  <div class="edu-status font-mono text-accent-blue">ADVANCED ENGINEERING STUDENT</div>
+                  <div class="edu-status font-mono text-ink-muted">QUALIFICATION COMPLETED • DARSHAN UNIVERSITY</div>
 
                   <div class="edu-specs-block font-mono">
-                    <div class="edu-spec-row"><span class="spec-label">PROGRAM:</span><span class="spec-val">Diploma in
-                        Computer Engineering</span></div>
-                    <div class="edu-spec-row"><span class="spec-label">LOCATION:</span><span
-                        class="spec-val">India</span></div>
-                    <div class="edu-spec-row"><span class="spec-label">CURRICULUM:</span><span
-                        class="spec-val">Practical software engineering, object-oriented systems, data structures, and
-                        relational database architecture.</span></div>
+                    <div class="edu-spec-row"><span class="spec-label">QUALIFICATION:</span><span class="spec-val">Diploma in Computer Engineering</span></div>
+                    <div class="edu-spec-row"><span class="spec-label">INSTITUTION:</span><span class="spec-val">Darshan University</span></div>
+                    <div class="edu-spec-row"><span class="spec-label">STATUS:</span><span class="spec-val">Completed</span></div>
+                    <div class="edu-spec-row"><span class="spec-label">CURRICULUM:</span><span class="spec-val">Foundational computing, object-oriented systems, data structures, web technologies, and relational database management.</span></div>
                   </div>
                 </div>
               </div>
@@ -4655,20 +5018,20 @@
       <div class="chapter-divider-wrap font-mono" aria-hidden="true">
         <div class="chapter-divider-line left"></div>
         <div class="chapter-divider-badge">
-          <span class="chapter-num text-accent-blue font-bold">CH.06 / 06</span><span class="chapter-sep">::</span><span
+          <span class="chapter-num text-accent-blue font-bold">CH.07 / 07</span><span class="chapter-sep">::</span><span
             class="chapter-name">DIRECT TRANSMISSION</span><span class="chapter-cross">+</span>
         </div>
         <div class="chapter-divider-line right"></div>
       </div>
 
-      <!-- ============ CHAPTER 06 — CONTACT ============ -->
-      <section id="contact-wrap" class="chapter-section-wrap" aria-label="Chapter 06: Contact">
+      <!-- ============ CHAPTER 07 — CONTACT ============ -->
+      <section id="contact-wrap" class="chapter-section-wrap" aria-label="Chapter 07: Contact">
         <div class="section-cad-mark top-left" aria-hidden="true">+</div>
         <div class="section-cad-mark top-right" aria-hidden="true">+</div>
 
         <section id="contact" class="portfolio-section" aria-label="Contact">
           <div class="section-header-block">
-            <div class="section-pre-title font-mono"><span>// CHAPTER_06</span><span>•</span><span>DIRECT
+            <div class="section-pre-title font-mono"><span>// CHAPTER_07</span><span>•</span><span>DIRECT
                 TRANSMISSION</span></div>
             <div class="section-title-wrap">
               <h2 class="section-main-title font-display">CONTACT</h2>
@@ -4691,9 +5054,9 @@
                   </div>
 
                   <div class="contact-links-stack font-mono">
-                    <a href="https://github.com/Dhrumil1411" target="_blank" rel="noreferrer"
+                    <a href="https://github.com/Dhrumil1411" target="_blank" rel="noopener noreferrer"
                       class="contact-channel-btn"><span>GITHUB // @Dhrumil1411</span><span>↗</span></a>
-                    <a href="https://www.linkedin.com/in/dhrumil-dashadia-43903a30a/" target="_blank" rel="noreferrer"
+                    <a href="https://www.linkedin.com/in/dhrumil-dashadia-43903a30a/" target="_blank" rel="noopener noreferrer"
                       class="contact-channel-btn"><span>LINKEDIN // PROFILE</span><span>↗</span></a>
                   </div>
                 </div>
@@ -4719,7 +5082,7 @@
       <div class="footer-inner">
         <div class="footer-left">
           <div class="footer-brand font-display">DHRUMIL DASHADIA</div>
-          <div class="footer-role text-ink-muted">STUDENT DEVELOPER / ASPIRING SOFTWARE DEVELOPER • INDIA</div>
+          <div class="footer-role text-ink-muted">FULL-STACK DEVELOPER • 2ND-YEAR B.TECH CSE (KL UNIVERSITY) • INDIA</div>
         </div>
         <div class="footer-center">
           <div class="footer-status"><span class="status-pulse-dot"></span><span>SYSTEM STATUS: OPERATIONAL</span></div>
@@ -4749,14 +5112,18 @@
 
     const profile = {
       name: "Dhrumil Dashadia",
-      role: "Student Developer / Aspiring Software Developer",
-      education: "Diploma in Computer Engineering",
+      role: "Full-Stack Developer",
+      currentStatus: "2nd-year B.Tech student",
+      currentDegree: "Computer Science and Engineering (CSE)",
+      currentUniversity: "KL University",
+      prevQualification: "Diploma in Computer Engineering",
+      prevUniversity: "Darshan University",
       location: "India",
       dwgRef: "DWG: DD-2026",
 
-      heroIntro: "Student developer passionate about engineering intelligent full-stack applications, computer vision pipelines, and real-time systems. Focused on clean architecture, practical problem-solving, and continuous learning.",
+      heroIntro: "Full-Stack Developer focused on building responsive websites, web applications, and practical software solutions using modern frontend and backend technologies.",
 
-      aboutText: "I am an aspiring software developer with a background in Computer Engineering based in India. I enjoy building practical software that solves real problems — from clinical decision support tools and computer vision pipelines to real-time web applications. My focus is on writing clean, maintainable code and continuously learning modern full-stack architectures.",
+      aboutText: "I am a 2nd-year Computer Science and Engineering (CSE) student at KL University in India, having previously completed a Diploma in Computer Engineering at Darshan University. I enjoy building practical software and solving technical problems across frontend and backend environments. My interests center on full-stack development, responsive web applications, and exploring AI-powered software systems. With previous web development internship experience, my focus is on writing clean, maintainable code and delivering dependable, real-world solutions.",
 
       socials: {
         github: "https://github.com/Dhrumil1411",
@@ -4768,15 +5135,25 @@
 
     /**
      * Dhrumil Dashadia — Education Record
-     * Minimal, verified academic record.
+     * Verified academic progression distinguishing current B.Tech from completed Diploma.
      */
 
-    const educationRecord = {
-      degree: "Diploma in Computer Engineering",
-      level: "Advanced Engineering Student",
-      location: "India",
-      focus: "Practical software engineering, object-oriented systems, data structures, and relational database architecture."
-    };
+    const educationRecord = [
+      {
+        degree: "B.Tech in Computer Science and Engineering",
+        status: "2nd-Year Student (Current)",
+        university: "KL University",
+        location: "India",
+        focus: "Full-stack software engineering, web application architectures, data structures, algorithms, and practical software design."
+      },
+      {
+        degree: "Diploma in Computer Engineering",
+        status: "Completed",
+        university: "Darshan University",
+        location: "India",
+        focus: "Foundational computing, object-oriented systems, data structures, web technologies, and relational database management."
+      }
+    ];
 
     /**
      * Dhrumil Dashadia — Verified Experience
@@ -4806,7 +5183,7 @@
       {
         id: "doctor-diagnosis-assistant",
         ref: "PROJECT_01",
-        chapter: "03.1",
+        chapter: "04.1",
         title: "Doctor Diagnosis Assistant",
         subtitle: "Clinical Decision Support Platform",
         tagline: "AI / Healthcare Informatics",
@@ -4832,7 +5209,7 @@
       {
         id: "modicam",
         ref: "PROJECT_02",
-        chapter: "03.2",
+        chapter: "04.2",
         title: "ModiCam",
         subtitle: "Real-Time AI Virtual Camera Pipeline",
         tagline: "Computer Vision / Deep Learning",
@@ -4857,7 +5234,7 @@
       {
         id: "blood-camp-finder",
         ref: "PROJECT_03",
-        chapter: "03.3",
+        chapter: "04.3",
         title: "Blood Camp Finder V3.1",
         subtitle: "Cross-Platform Mobile Application",
         tagline: "Mobile / Cloud / Geolocation",
@@ -4882,7 +5259,7 @@
       {
         id: "web-chat-app",
         ref: "PROJECT_04",
-        chapter: "03.4",
+        chapter: "04.4",
         title: "Web Chat App",
         subtitle: "Real-Time Messaging Application",
         tagline: "Real-Time Web / WebSocket",
@@ -4955,10 +5332,11 @@
       const SECTIONS = [
         { id: 'hero', num: '01', label: 'OVERVIEW', fullTitle: 'INTRODUCTION' },
         { id: 'about', num: '02', label: 'ABOUT', fullTitle: 'ABOUT ME' },
-        { id: 'projects', num: '03', label: 'PROJECTS', fullTitle: 'SELECTED PROJECTS' },
-        { id: 'skills', num: '04', label: 'SKILLS', fullTitle: 'TECHNICAL SKILLS' },
-        { id: 'experience', num: '05', label: 'EXPERIENCE', fullTitle: 'EXPERIENCE & EDUCATION' },
-        { id: 'contact', num: '06', label: 'CONTACT', fullTitle: 'DIRECT TRANSMISSION' },
+        { id: 'services', num: '03', label: 'SERVICES', fullTitle: 'SERVICES & CAPABILITIES' },
+        { id: 'projects', num: '04', label: 'PROJECTS', fullTitle: 'SELECTED PROJECTS' },
+        { id: 'skills', num: '05', label: 'SKILLS', fullTitle: 'TECHNICAL SKILLS' },
+        { id: 'experience', num: '06', label: 'EXPERIENCE', fullTitle: 'EXPERIENCE & EDUCATION' },
+        { id: 'contact', num: '07', label: 'CONTACT', fullTitle: 'DIRECT TRANSMISSION' },
       ];
       const NAV_OFFSET = 84;
 
@@ -5319,10 +5697,11 @@
 
       function drawerHTML() {
         const active = SECTIONS.find((s) => s.id === nav.activeId) || SECTIONS[0];
+        const total = String(SECTIONS.length).padStart(2, '0');
         return `
       <div class="mobile-drawer-header">
         <span class="drawer-title">// CHAPTER INDEX</span>
-        <span class="drawer-status text-accent-blue">${active.num} / 06 ACTIVE</span>
+        <span class="drawer-status text-accent-blue">${active.num} / ${total} ACTIVE</span>
       </div>
       <nav class="mobile-nav-links">
         ${SECTIONS.map((s) => `
@@ -5373,7 +5752,8 @@
           if (on) moveIndicator(rulerMarker, b, { prepend: true, duration: 340 });
         });
 
-        $('#indNum').textContent = `${active.num} / 06`;
+        const total = String(SECTIONS.length).padStart(2, '0');
+        $('#indNum').textContent = `${active.num} / ${total}`;
         $('#indTitle').textContent = active.fullTitle;
         $('#mobNum').textContent = active.num;
         $('#rulerPrev').disabled = idx === 0;
