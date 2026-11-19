@@ -1473,18 +1473,62 @@
       margin-bottom: 16px;
     }
 
+    .hero-identity-strip {
+      display: inline-flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px 14px;
+      background-color: var(--bp-bg);
+      border: 1.5px solid var(--bp-ink);
+      padding: 6px 14px;
+      margin-bottom: 20px;
+      box-shadow: 2px 2px 0px var(--bp-ink);
+    }
+
+    .hero-identity-code {
+      font-size: 0.72rem;
+      font-weight: 800;
+      color: var(--bp-accent-blue);
+      letter-spacing: 0.08em;
+    }
+
+    .hero-identity-name {
+      font-size: clamp(1.4rem, 2.8vw, 2.1rem);
+      line-height: 1;
+      color: var(--bp-ink);
+      letter-spacing: 0.05em;
+    }
+
+    .hero-identity-role {
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      background-color: var(--bp-ink);
+      color: var(--bp-bg);
+      padding: 3px 8px;
+    }
+
     .hero-headline {
       font-size: clamp(2.35rem, 5.2vw, 4.4rem);
       line-height: 0.96;
       letter-spacing: 0.02em;
       color: var(--bp-ink);
       margin-bottom: 18px;
+      word-break: break-word;
     }
 
     @media (max-width: 640px) {
+      .hero-identity-strip {
+        gap: 6px 10px;
+        padding: 5px 10px;
+        margin-bottom: 16px;
+      }
+      .hero-identity-name {
+        font-size: 1.35rem;
+      }
       .hero-headline {
-        font-size: clamp(1.85rem, 7.8vw, 2.5rem);
-        line-height: 1.0;
+        font-size: clamp(1.75rem, 7.2vw, 2.35rem);
+        line-height: 1.02;
       }
     }
 
@@ -1936,7 +1980,7 @@
       display: flex;
       flex-direction: column;
       gap: 8px;
-      margin-top: 4px;
+      margin-top: auto;
     }
 
     .service-cap-heading {
@@ -2017,6 +2061,144 @@
       color: var(--bp-bg);
       transform: translate(-1px, -1px);
       box-shadow: 2px 2px 0px var(--bp-accent-blue);
+    }
+
+    /* Workflow Section within Services */
+    .services-workflow-wrap {
+      margin-top: 36px;
+    }
+
+    .workflow-card {
+      padding: 28px 24px;
+      background-color: var(--bp-bg-card);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    @media (min-width: 768px) {
+      .workflow-card {
+        padding: 34px 32px;
+      }
+    }
+
+    .workflow-header-strip {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      border-bottom: 2px solid var(--bp-ink);
+      padding-bottom: 12px;
+      font-size: 0.72rem;
+      font-weight: 700;
+    }
+
+    .workflow-header-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .workflow-badge {
+      background-color: var(--bp-ink);
+      color: var(--bp-bg);
+      padding: 3px 10px;
+      letter-spacing: 0.06em;
+    }
+
+    .workflow-badge-title {
+      letter-spacing: 0.05em;
+      color: var(--bp-ink);
+    }
+
+    .workflow-note {
+      font-size: 0.82rem;
+      line-height: 1.5;
+      background-color: var(--bp-bg);
+      border: 1px dashed var(--bp-ink-muted);
+      padding: 10px 14px;
+      color: var(--bp-ink);
+    }
+
+    .workflow-steps-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+
+    @media (min-width: 680px) {
+      .workflow-steps-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .workflow-steps-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    .workflow-step-item {
+      background-color: var(--bp-bg);
+      border: 1.5px solid var(--bp-ink);
+      padding: 16px 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      position: relative;
+    }
+
+    .step-marker {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--bp-ink-light);
+      padding-bottom: 6px;
+      font-size: 0.68rem;
+    }
+
+    .step-num {
+      font-size: 1.1rem;
+      line-height: 1;
+    }
+
+    .step-phase {
+      color: var(--bp-ink-muted);
+      letter-spacing: 0.06em;
+    }
+
+    .step-title {
+      font-size: 1.35rem;
+      line-height: 1;
+      color: var(--bp-ink);
+      letter-spacing: 0.02em;
+      margin-top: 2px;
+    }
+
+    .step-text {
+      font-size: 0.78rem;
+      line-height: 1.45;
+      color: var(--bp-ink-muted);
+    }
+
+    .workflow-action-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      border-top: 1px dashed var(--bp-ink-muted);
+      padding-top: 16px;
+      font-size: 0.74rem;
+      font-weight: 700;
+    }
+
+    .workflow-action-info {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--bp-ink);
     }
 
     /* ---- components/Projects/ProjectModal.css ---- */
@@ -4440,7 +4622,9 @@
       .hero-social-link,
       .nav-link-tech,
       .mobile-nav-item,
-      .service-action-btn {
+      .service-action-btn,
+      .workflow-card,
+      .workflow-step-item {
         transition: none !important;
         transform: none !important;
         filter: none !important;
@@ -4585,7 +4769,13 @@
             </div>
 
             <div class="hero-content">
-              <div class="hero-label font-mono">// CHAPTER_01 • DHRUMIL DASHADIA // DEVELOPER PORTFOLIO</div>
+              <div class="hero-label font-mono">// CHAPTER_01 • DEVELOPER PORTFOLIO</div>
+
+              <div class="hero-identity-strip font-mono" aria-label="Developer Name and Role">
+                <span class="hero-identity-code">// ENGINEER</span>
+                <span class="hero-identity-name font-display">DHRUMIL DASHADIA</span>
+                <span class="hero-identity-role font-mono">FULL-STACK DEVELOPER</span>
+              </div>
 
               <h1 class="hero-name hero-headline font-display">
                 <span data-split-text="I BUILD WEB APPLICATIONS" aria-label="I BUILD WEB APPLICATIONS">I BUILD WEB APPLICATIONS</span> <br />
@@ -4593,7 +4783,7 @@
                     aria-label="THAT SOLVE REAL PROBLEMS.">THAT SOLVE REAL PROBLEMS.</span></span>
               </h1>
 
-              <div class="hero-role-title font-mono">DHRUMIL DASHADIA // FULL-STACK DEVELOPER • 2ND-YEAR B.TECH CSE (KL UNIVERSITY)</div>
+              <div class="hero-role-title font-mono">2ND-YEAR B.TECH CSE • KL UNIVERSITY, INDIA</div>
 
               <p class="hero-intro-text">Full-Stack Developer focused on building responsive websites, web applications, and practical software solutions using modern frontend and backend technologies.</p>
 
@@ -4719,11 +4909,11 @@
 
                 <div class="service-body">
                   <h3 class="service-title font-display">WEBSITE DEVELOPMENT</h3>
-                  <div class="service-tagline font-mono">RESPONSIVE &amp; MODERN WEB EXPERIENCES</div>
-                  <p class="service-desc">Custom, responsive, and performance-driven websites crafted to establish a strong online presence. Focused on intuitive UI, fast load times, and cross-device responsiveness.</p>
+                  <div class="service-tagline font-mono">RESPONSIVE &amp; ACCESSIBLE WEB PAGES</div>
+                  <p class="service-desc">Clean, responsive websites built from scratch or design files. Focused on straightforward navigation, fast loading, mobile-friendly layouts, and clean code that is easy to update.</p>
 
                   <div class="service-capabilities-block font-mono">
-                    <div class="service-cap-heading">DELIVERABLES &amp; CAPABILITIES</div>
+                    <div class="service-cap-heading">DELIVERABLES &amp; SCOPE</div>
                     <ul class="service-cap-list">
                       <li class="service-cap-item"><span class="service-cap-bullet">+</span><span>Responsive business websites</span></li>
                       <li class="service-cap-item"><span class="service-cap-bullet">+</span><span>Portfolio websites</span></li>
@@ -4758,11 +4948,11 @@
 
                 <div class="service-body">
                   <h3 class="service-title font-display">FULL-STACK WEB DEVELOPMENT</h3>
-                  <div class="service-tagline font-mono">END-TO-END DYNAMIC APPLICATIONS</div>
-                  <p class="service-desc">Complete web applications with interactive client interfaces, structured backend architecture, secure authentication, and seamless database integration.</p>
+                  <div class="service-tagline font-mono">PRACTICAL WEB APPLICATIONS</div>
+                  <p class="service-desc">Functional web applications connecting dynamic frontend interfaces with backend services. Includes database integration, user authentication, and REST API connectivity for practical web tools and workflows.</p>
 
                   <div class="service-capabilities-block font-mono">
-                    <div class="service-cap-heading">DELIVERABLES &amp; CAPABILITIES</div>
+                    <div class="service-cap-heading">DELIVERABLES &amp; SCOPE</div>
                     <ul class="service-cap-list">
                       <li class="service-cap-item"><span class="service-cap-bullet">+</span><span>Web application development</span></li>
                       <li class="service-cap-item"><span class="service-cap-bullet">+</span><span>REST API integration</span></li>
@@ -4798,11 +4988,11 @@
 
                 <div class="service-body">
                   <h3 class="service-title font-display">WEBSITE FIXES &amp; IMPROVEMENTS</h3>
-                  <div class="service-tagline font-mono">DEBUGGING, REFINEMENT &amp; OPTIMIZATION</div>
-                  <p class="service-desc">Targeted fixes, UI polish, and functional upgrades for existing sites. From layout responsiveness and bug hunting to API troubleshooting and maintenance.</p>
+                  <div class="service-tagline font-mono">DEBUGGING &amp; UI REFINEMENT</div>
+                  <p class="service-desc">Hands-on troubleshooting, layout fixes, and feature additions for existing websites. Solving broken responsiveness, repairing frontend bugs, tweaking UI styling, and debugging API connections.</p>
 
                   <div class="service-capabilities-block font-mono">
-                    <div class="service-cap-heading">DELIVERABLES &amp; CAPABILITIES</div>
+                    <div class="service-cap-heading">DELIVERABLES &amp; SCOPE</div>
                     <ul class="service-cap-list">
                       <li class="service-cap-item"><span class="service-cap-bullet">+</span><span>Bug fixing</span></li>
                       <li class="service-cap-item"><span class="service-cap-bullet">+</span><span>UI improvements</span></li>
@@ -4824,6 +5014,77 @@
                     <span>&rarr;</span>
                   </button>
                 </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Compact Client Engagement Workflow -->
+          <div class="services-workflow-wrap" data-ac data-distance="20" data-delay="0.15" data-duration="0.65">
+            <div class="chamfer-card workflow-card">
+              <div class="workflow-header-strip font-mono">
+                <div class="workflow-header-left">
+                  <span class="workflow-badge">PROCESS SPEC</span>
+                  <span class="workflow-badge-title">HOW WE WORK TOGETHER</span>
+                </div>
+                <div class="workflow-header-right text-ink-muted">
+                  <span>CHANNEL: EMAIL &amp; WRITTEN MESSAGES</span>
+                </div>
+              </div>
+
+              <div class="workflow-note font-mono">
+                <span class="text-accent-blue font-bold">// COMMUNICATION PROTOCOL:</span> Initial requirements and project discussions are handled efficiently via email or text messages — no unnecessary meetings needed to get started.
+              </div>
+
+              <div class="workflow-steps-grid font-mono">
+                <!-- Step 01 -->
+                <div class="workflow-step-item">
+                  <div class="step-marker">
+                    <span class="step-num text-accent-blue font-bold">01</span>
+                    <span class="step-phase">PHASE_01</span>
+                  </div>
+                  <h4 class="step-title font-display">SHARE REQUIREMENTS</h4>
+                  <p class="step-text">Send an email or message describing what you want built, desired features, any design references, and your target timeline.</p>
+                </div>
+
+                <!-- Step 02 -->
+                <div class="workflow-step-item">
+                  <div class="step-marker">
+                    <span class="step-num text-accent-blue font-bold">02</span>
+                    <span class="step-phase">PHASE_02</span>
+                  </div>
+                  <h4 class="step-title font-display">SCOPE &amp; PLANNING</h4>
+                  <p class="step-text">I review your notes, ask clarifying questions, and outline an agreed-upon scope of work with deliverables and reasonable milestones.</p>
+                </div>
+
+                <!-- Step 03 -->
+                <div class="workflow-step-item">
+                  <div class="step-marker">
+                    <span class="step-num text-accent-blue font-bold">03</span>
+                    <span class="step-phase">PHASE_03</span>
+                  </div>
+                  <h4 class="step-title font-display">DEVELOPMENT &amp; UPDATES</h4>
+                  <p class="step-text">I build the project with clean, modular code, sharing work-in-progress preview links so you can track progress and give early feedback.</p>
+                </div>
+
+                <!-- Step 04 -->
+                <div class="workflow-step-item">
+                  <div class="step-marker">
+                    <span class="step-num text-accent-blue font-bold">04</span>
+                    <span class="step-phase">PHASE_04</span>
+                  </div>
+                  <h4 class="step-title font-display">REVIEW &amp; DELIVERY</h4>
+                  <p class="step-text">We test everything together, make necessary adjustments, and I hand over the clean codebase, deployment assets, or live site.</p>
+                </div>
+              </div>
+
+              <div class="workflow-action-bar font-mono">
+                <div class="workflow-action-info">
+                  <span class="status-pulse-dot"></span>
+                  <span>READY TO DISCUSS A PROJECT OR SITE FIX?</span>
+                </div>
+                <button class="btn-blueprint-cta btn-sm" data-goto="contact">
+                  <span>SEND INITIAL REQUIREMENTS &rarr;</span>
+                </button>
               </div>
             </div>
           </div>
