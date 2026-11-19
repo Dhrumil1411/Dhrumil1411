@@ -1894,6 +1894,27 @@
     }
 
         /* ---- components/Services/Services.css ---- */
+
+    /* Client Problem & Audience Boxes */
+    .service-problem-box,
+    .service-audience-box {
+      background-color: var(--bp-bg);
+      border: 1px dashed var(--bp-ink-muted);
+      padding: 9px 12px;
+      font-size: 0.74rem;
+      line-height: 1.45;
+      color: var(--bp-ink);
+      margin-bottom: 10px;
+    }
+
+    .service-box-label {
+      font-weight: 800;
+      color: var(--bp-accent-blue);
+      margin-right: 5px;
+      display: inline-block;
+      letter-spacing: 0.04em;
+    }
+
     .services-grid {
       display: grid;
       grid-template-columns: 1fr;
@@ -3568,96 +3589,210 @@
     }
 
     /* ---- components/Contact/Contact.css ---- */
-    /* Simplified Contact Styles */
-    .contact-unified-grid {
+    /* Enhanced Client Conversion Contact Styles */
+    .contact-duo-grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 24px;
+      gap: 26px;
     }
 
-    @media (min-width: 860px) {
-      .contact-unified-grid {
-        grid-template-columns: 1.1fr 0.9fr;
+    @media (min-width: 920px) {
+      .contact-duo-grid {
+        grid-template-columns: 1.15fr 0.85fr;
       }
     }
 
     .contact-direct-card,
-    .contact-form-card {
-      padding: 32px 24px;
+    .contact-guide-card {
+      padding: 0;
       background-color: var(--bp-bg-card);
-    }
-
-    @media (min-width: 768px) {
-
-      .contact-direct-card,
-      .contact-form-card {
-        padding: 36px 32px;
-      }
-    }
-
-    .contact-invite-body {
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      border: 2px solid var(--bp-ink);
+      overflow: hidden;
     }
 
-    .contact-heading {
-      font-size: clamp(2.2rem, 4vw, 3rem);
-      line-height: 0.95;
-      color: var(--bp-ink);
-    }
-
-    .contact-lead-text {
-      font-size: 1rem;
-      line-height: 1.6;
-      color: var(--bp-ink);
-    }
-
-    .direct-email-box {
-      background-color: var(--bp-bg);
-      border: 1.5px solid var(--bp-ink);
-      padding: 16px;
+    .contact-card-head {
       display: flex;
-      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 18px;
+      background-color: var(--bp-bg-secondary);
+      border-bottom: 2px solid var(--bp-ink);
+      font-size: 0.72rem;
+      font-weight: 700;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .contact-head-badge {
+      background-color: var(--bp-ink);
+      color: var(--bp-bg);
+      padding: 2px 8px;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+    }
+
+    .contact-status-pill {
+      font-size: 0.68rem;
+      letter-spacing: 0.06em;
+      display: inline-flex;
+      align-items: center;
       gap: 6px;
     }
 
-    .email-label {
+    .contact-guide-tag {
       font-size: 0.68rem;
-      color: var(--bp-ink-muted);
-      font-weight: 700;
+      letter-spacing: 0.06em;
     }
 
-    .email-link {
-      font-size: 1.05rem;
+    .contact-invite-body,
+    .inquiry-guide-body {
+      padding: 28px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    @media (min-width: 768px) {
+      .contact-invite-body,
+      .inquiry-guide-body {
+        padding: 32px 28px;
+      }
+    }
+
+    .contact-heading {
+      font-size: clamp(2rem, 3.8vw, 2.75rem);
+      line-height: 0.95;
+      color: var(--bp-ink);
+      letter-spacing: 0.02em;
+    }
+
+    .contact-lead-text {
+      font-size: 0.92rem;
+      line-height: 1.55;
+      color: var(--bp-ink);
+    }
+
+    .contact-primary-action-wrap {
+      margin-top: 4px;
+    }
+
+    .contact-primary-btn {
+      width: 100%;
+      padding: 13px 18px;
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: var(--bp-ink);
+      color: var(--bp-bg) !important;
+      border: 2px solid var(--bp-ink);
+      box-shadow: 4px 4px 0px var(--bp-accent-blue);
+      cursor: pointer;
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast);
+    }
+
+    .contact-primary-btn:hover {
+      transform: translate(-2px, -2px);
+      box-shadow: 6px 6px 0px var(--bp-accent-blue);
+      background-color: var(--bp-accent-blue);
+      color: #FFFFFF !important;
+    }
+
+    .contact-email-box {
+      background-color: var(--bp-bg);
+      border: 1.5px solid var(--bp-ink);
+      padding: 12px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .contact-email-left {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .email-label {
+      font-size: 0.65rem;
+      color: var(--bp-ink-muted);
+      font-weight: 800;
+      letter-spacing: 0.06em;
+    }
+
+    .contact-email-addr {
+      font-size: 0.95rem;
       font-weight: 800;
       color: var(--bp-ink);
-      word-break: break-all;
       text-decoration: underline;
+      word-break: break-all;
+    }
+
+    .contact-email-addr:hover {
+      color: var(--bp-accent-blue);
     }
 
     .btn-copy {
-      align-self: flex-start;
-      margin-top: 6px;
       background-color: var(--bp-bg-card);
-      border: 1px solid var(--bp-ink);
+      border: 1.5px solid var(--bp-ink);
       color: var(--bp-ink);
       font-size: 0.68rem;
-      font-weight: 700;
-      padding: 4px 10px;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      padding: 6px 12px;
       cursor: pointer;
+      box-shadow: 2px 2px 0px var(--bp-ink);
       transition: all var(--transition-fast);
     }
 
     .btn-copy:hover {
       background-color: var(--bp-ink);
       color: var(--bp-bg);
+      transform: translate(-1px, -1px);
+      box-shadow: 3px 3px 0px var(--bp-ink);
     }
 
-    .contact-links-stack {
+    .contact-comm-note {
+      background-color: rgba(26, 75, 140, 0.06);
+      border: 1.5px dashed var(--bp-accent-blue);
+      padding: 11px 14px;
+      font-size: 0.76rem;
+      line-height: 1.45;
+      color: var(--bp-ink);
+    }
+
+    .contact-secondary-channels {
       display: flex;
       flex-direction: column;
       gap: 8px;
+      border-top: 1px dashed var(--bp-ink-muted);
+      padding-top: 14px;
+    }
+
+    .channels-label {
+      font-size: 0.65rem;
+      font-weight: 800;
+      color: var(--bp-ink-muted);
+      letter-spacing: 0.05em;
+    }
+
+    .contact-socials-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    @media (max-width: 520px) {
+      .contact-socials-row {
+        grid-template-columns: 1fr;
+      }
     }
 
     .contact-channel-btn {
@@ -3665,19 +3800,103 @@
       justify-content: space-between;
       align-items: center;
       background-color: var(--bp-bg);
-      border: 1px solid var(--bp-ink);
-      padding: 10px 14px;
-      font-size: 0.75rem;
-      font-weight: 700;
+      border: 1.5px solid var(--bp-ink);
+      padding: 9px 12px;
+      font-size: 0.72rem;
+      font-weight: 800;
       color: var(--bp-ink);
       text-decoration: none;
-      transition: transform var(--transition-fast), background-color var(--transition-fast);
+      transition: transform var(--transition-fast), background-color var(--transition-fast), border-color var(--transition-fast);
     }
 
     .contact-channel-btn:hover {
-      transform: translateX(4px);
+      transform: translateY(-2px);
       background-color: var(--bp-bg-secondary);
       border-color: var(--bp-accent-blue);
+    }
+
+    /* Inquiry Guide Card */
+    .inquiry-guide-title {
+      font-size: 1.35rem;
+      color: var(--bp-ink);
+      letter-spacing: 0.02em;
+    }
+
+    .inquiry-guide-desc {
+      font-size: 0.76rem;
+      line-height: 1.45;
+      color: var(--bp-ink-muted);
+    }
+
+    .inquiry-checklist-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .inquiry-checklist-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      background-color: var(--bp-bg);
+      border: 1.5px solid var(--bp-ink);
+      padding: 9px 11px;
+    }
+
+    .inquiry-step-num {
+      background-color: var(--bp-ink);
+      color: var(--bp-bg);
+      font-size: 0.68rem;
+      font-weight: 800;
+      padding: 2px 6px;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .inquiry-step-text strong {
+      display: block;
+      font-size: 0.74rem;
+      letter-spacing: 0.04em;
+      color: var(--bp-ink);
+      margin-bottom: 2px;
+    }
+
+    .inquiry-step-text p {
+      font-size: 0.71rem;
+      line-height: 1.35;
+      color: var(--bp-ink-muted);
+      margin: 0;
+    }
+
+    .trust-assurances-block {
+      border-top: 1.5px dashed var(--bp-ink-muted);
+      padding-top: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+    }
+
+    .trust-header {
+      font-size: 0.68rem;
+      font-weight: 800;
+      color: var(--bp-ink);
+      letter-spacing: 0.06em;
+    }
+
+    .trust-assurance-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 0.72rem;
+      line-height: 1.4;
+      color: var(--bp-ink);
+    }
+
+    .trust-check-icon {
+      color: var(--bp-accent-green);
+      font-weight: 900;
+      flex-shrink: 0;
+      margin-top: 1px;
     }
 
     /* Simple Contact Form */
@@ -4311,10 +4530,7 @@
       min-width: 0;
     }
 
-    /* Contact: single card now that the form is gone */
-    .contact-unified-grid {
-      grid-template-columns: 1fr !important;
-    }
+    /* Contact duo grid handled above */
 
     /* ====================================================================
    LAYOUT VARIATIONS + HERO VISUAL
@@ -5021,6 +5237,14 @@
                   <div class="service-tagline font-mono">RESPONSIVE &amp; ACCESSIBLE WEB PAGES</div>
                   <p class="service-desc">Clean, responsive websites built from scratch or design files. Focused on straightforward navigation, fast loading, mobile-friendly layouts, and clean code that is easy to update.</p>
 
+                  <div class="service-problem-box font-mono">
+                    <span class="service-box-label">// PROBLEM SOLVED:</span> Outdated, slow, or rigid websites that don't display properly on mobile devices or fail to clearly represent your brand.
+                  </div>
+
+                  <div class="service-audience-box font-mono">
+                    <span class="service-box-label">// BEST FOR:</span> Small business owners, professionals, and creators seeking a fast, modern web presence that converts visitors.
+                  </div>
+
                   <div class="service-capabilities-block font-mono">
                     <div class="service-cap-heading">DELIVERABLES &amp; SCOPE</div>
                     <ul class="service-cap-list">
@@ -5039,7 +5263,7 @@
                     <span class="service-tech-pill">Tailwind CSS</span>
                     <span class="service-tech-pill">HTML5/CSS3</span>
                   </div>
-                  <button class="service-action-btn font-mono" data-goto="contact">
+                  <button class="service-action-btn font-mono" data-goto="contact" data-service="Website Development">
                     <span>INQUIRE ABOUT WEBSITES</span>
                     <span>&rarr;</span>
                   </button>
@@ -5060,6 +5284,14 @@
                   <div class="service-tagline font-mono">PRACTICAL WEB APPLICATIONS</div>
                   <p class="service-desc">Functional web applications connecting dynamic frontend interfaces with backend services. Includes database integration, user authentication, and REST API connectivity for practical web tools and workflows.</p>
 
+                  <div class="service-problem-box font-mono">
+                    <span class="service-box-label">// PROBLEM SOLVED:</span> Turning product concepts or manual workflows into functional web applications with real authentication, database storage, and API data.
+                  </div>
+
+                  <div class="service-audience-box font-mono">
+                    <span class="service-box-label">// BEST FOR:</span> Founders and small teams building an MVP, custom internal web tool, or database-driven portal without enterprise bloat.
+                  </div>
+
                   <div class="service-capabilities-block font-mono">
                     <div class="service-cap-heading">DELIVERABLES &amp; SCOPE</div>
                     <ul class="service-cap-list">
@@ -5079,7 +5311,7 @@
                     <span class="service-tech-pill">PostgreSQL</span>
                     <span class="service-tech-pill">Firebase</span>
                   </div>
-                  <button class="service-action-btn font-mono" data-goto="contact">
+                  <button class="service-action-btn font-mono" data-goto="contact" data-service="Full-Stack Web Development">
                     <span>INQUIRE ABOUT APPS</span>
                     <span>&rarr;</span>
                   </button>
@@ -5100,6 +5332,14 @@
                   <div class="service-tagline font-mono">DEBUGGING &amp; UI REFINEMENT</div>
                   <p class="service-desc">Hands-on troubleshooting, layout fixes, and feature additions for existing websites. Solving broken responsiveness, repairing frontend bugs, tweaking UI styling, and debugging API connections.</p>
 
+                  <div class="service-problem-box font-mono">
+                    <span class="service-box-label">// PROBLEM SOLVED:</span> Annoying layout breakage, mobile responsiveness bugs, failing API calls, or broken UI elements on existing websites.
+                  </div>
+
+                  <div class="service-audience-box font-mono">
+                    <span class="service-box-label">// BEST FOR:</span> Anyone with an active website needing quick, dependable fixes, mobile styling corrections, or clean feature additions.
+                  </div>
+
                   <div class="service-capabilities-block font-mono">
                     <div class="service-cap-heading">DELIVERABLES &amp; SCOPE</div>
                     <ul class="service-cap-list">
@@ -5118,7 +5358,7 @@
                     <span class="service-tech-pill">API Debugging</span>
                     <span class="service-tech-pill">Maintenance</span>
                   </div>
-                  <button class="service-action-btn font-mono" data-goto="contact">
+                  <button class="service-action-btn font-mono" data-goto="contact" data-service="Website Fixes & Improvements">
                     <span>INQUIRE ABOUT FIXES</span>
                     <span>&rarr;</span>
                   </button>
@@ -5401,38 +5641,127 @@
 
         <section id="contact" class="portfolio-section" aria-label="Contact">
           <div class="section-header-block">
-            <div class="section-pre-title font-mono"><span>// CHAPTER_07</span><span>•</span><span>DIRECT
-                TRANSMISSION</span></div>
+            <div class="section-pre-title font-mono"><span>// CHAPTER_07</span><span>•</span><span>DIRECT TRANSMISSION</span></div>
             <div class="section-title-wrap">
               <h2 class="section-main-title font-display">CONTACT</h2>
-              <div class="section-meta-tag font-mono">DIRECT INBOX</div>
+              <div class="section-meta-tag font-mono">PROJECT INQUIRIES &amp; INBOX</div>
             </div>
           </div>
 
-          <div class="contact-unified-grid">
+          <div class="contact-duo-grid">
+            <!-- Card 1: Direct Inquiry & Primary Action -->
             <div data-ac data-distance="20" data-duration="0.65">
               <div class="chamfer-card contact-direct-card">
-                <div class="contact-invite-body">
-                  <h3 class="contact-heading font-display">LET'S CONNECT</h3>
-                  <p class="contact-lead-text">I am always open to discussing new software development opportunities,
-                    technical collaborations, or engineering projects. Feel free to reach out directly.</p>
+                <div class="contact-card-head font-mono">
+                  <span class="contact-head-badge">07 // DIRECT TRANSMISSION</span>
+                  <span class="contact-status-pill text-accent-green font-bold"><span class="status-pulse-dot"></span> OPEN FOR PROJECTS</span>
+                </div>
 
-                  <div class="direct-email-box font-mono">
-                    <span class="email-label">DIRECT EMAIL:</span>
-                    <a href="mailto:dhrumildashadia@gmail.com" class="email-link">dhrumildashadia@gmail.com</a>
-                    <button class="btn-copy font-mono" id="copyEmail">COPY EMAIL</button>
+                <div class="contact-invite-body">
+                  <h3 class="contact-heading font-display">START A PROJECT</h3>
+                  <p class="contact-lead-text">Have a project in mind, need a new responsive website, or want to fix an existing web app? I am open for small freelance web development projects. All initial discussions and scoping happen efficiently through written messages — no unscheduled calls or meetings needed.</p>
+
+                  <div class="contact-primary-action-wrap font-mono">
+                    <a href="mailto:dhrumildashadia@gmail.com?subject=Project%20Inquiry%20%E2%80%94%20Web%20Development&amp;body=Hi%20Dhrumil%2C%0A%0AI%20am%20reaching%20out%20regarding%20a%20potential%20web%20development%20project.%0A%0A1.%20Project%20Type%3A%20%5BWebsite%20Development%20%2F%20Full-Stack%20Web%20App%20%2F%20Website%20Fixes%5D%0A2.%20Brief%20Description%20%26%20Goals%3A%0A3.%20Expected%20Timeline%3A%0A4.%20Approximate%20Budget%20%28if%20available%29%3A%0A5.%20Design%20References%20or%20Links%3A%0A%0AThank%20you!" class="contact-primary-btn" id="composeEmailBtn">
+                      <span>COMPOSE PROJECT EMAIL</span>
+                      <span class="btn-arrow">&rarr;</span>
+                    </a>
                   </div>
 
-                  <div class="contact-links-stack font-mono">
-                    <a href="https://github.com/Dhrumil1411" target="_blank" rel="noopener noreferrer"
-                      class="contact-channel-btn"><span>GITHUB // @Dhrumil1411</span><span>↗</span></a>
-                    <a href="https://www.linkedin.com/in/dhrumil-dashadia-43903a30a/" target="_blank" rel="noopener noreferrer"
-                      class="contact-channel-btn"><span>LINKEDIN // PROFILE</span><span>↗</span></a>
+                  <div class="contact-email-box font-mono">
+                    <div class="contact-email-left">
+                      <span class="email-label">DIRECT EMAIL ADDRESS:</span>
+                      <a href="mailto:dhrumildashadia@gmail.com" class="contact-email-addr">dhrumildashadia@gmail.com</a>
+                    </div>
+                    <button class="btn-copy font-mono" id="copyEmail" title="Copy email address to clipboard">COPY EMAIL</button>
+                  </div>
+
+                  <div class="contact-comm-note font-mono">
+                    <span class="text-accent-blue font-bold">// WRITTEN COMMUNICATION:</span> Project requirements, questions, and milestone updates are conducted via email or written messages for clarity, continuous reference, and quick turnaround.
+                  </div>
+
+                  <div class="contact-secondary-channels font-mono">
+                    <span class="channels-label">// CODE &amp; PROFESSIONAL NETWORKS:</span>
+                    <div class="contact-socials-row">
+                      <a href="https://github.com/Dhrumil1411" target="_blank" rel="noopener noreferrer"
+                        class="contact-channel-btn"><span>GITHUB // @Dhrumil1411</span><span>↗</span></a>
+                      <a href="https://www.linkedin.com/in/dhrumil-dashadia-43903a30a/" target="_blank" rel="noopener noreferrer"
+                        class="contact-channel-btn"><span>LINKEDIN // PROFILE</span><span>↗</span></a>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
+            <!-- Card 2: Inquiry Specification Guide & Trust Guarantees -->
+            <div data-ac data-distance="20" data-delay="0.1" data-duration="0.65">
+              <div class="chamfer-card contact-guide-card">
+                <div class="contact-card-head font-mono">
+                  <span class="contact-head-badge">SPECIFICATION GUIDE</span>
+                  <span class="contact-guide-tag text-ink-muted">FIRST MESSAGE CHECKLIST</span>
+                </div>
+
+                <div class="inquiry-guide-body font-mono">
+                  <h4 class="inquiry-guide-title font-display">WHAT TO INCLUDE</h4>
+                  <p class="inquiry-guide-desc">To help me give you a clear scope and timeline estimate quickly, include these details in your initial message:</p>
+
+                  <div class="inquiry-checklist-stack">
+                    <div class="inquiry-checklist-item">
+                      <span class="inquiry-step-num">01</span>
+                      <div class="inquiry-step-text">
+                        <strong>PROJECT OBJECTIVE</strong>
+                        <p>What you want built or repaired (e.g. business website, full-stack app, or specific bug fixes).</p>
+                      </div>
+                    </div>
+
+                    <div class="inquiry-checklist-item">
+                      <span class="inquiry-step-num">02</span>
+                      <div class="inquiry-step-text">
+                        <strong>KEY REQUIREMENTS &amp; REFERENCES</strong>
+                        <p>Desired pages, key features, or links to reference websites and design files you like.</p>
+                      </div>
+                    </div>
+
+                    <div class="inquiry-checklist-item">
+                      <span class="inquiry-step-num">03</span>
+                      <div class="inquiry-step-text">
+                        <strong>TIMELINE EXPECTATION</strong>
+                        <p>When you need the project delivered or your target launch date.</p>
+                      </div>
+                    </div>
+
+                    <div class="inquiry-checklist-item">
+                      <span class="inquiry-step-num">04</span>
+                      <div class="inquiry-step-text">
+                        <strong>APPROXIMATE BUDGET</strong>
+                        <p>Your estimated budget range (helps ensure we plan a realistic, effective scope).</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Trust Guarantees Block -->
+                  <div class="trust-assurances-block">
+                    <div class="trust-header">// COLLABORATION COMMITMENTS</div>
+                    <div class="trust-assurance-item">
+                      <span class="trust-check-icon">✓</span>
+                      <span>Direct Developer Access: You collaborate directly with me, not an agency intermediary.</span>
+                    </div>
+                    <div class="trust-assurance-item">
+                      <span class="trust-check-icon">✓</span>
+                      <span>Verifiable Codebases: Every project in my portfolio is backed by genuine public GitHub code.</span>
+                    </div>
+                    <div class="trust-assurance-item">
+                      <span class="trust-check-icon">✓</span>
+                      <span>Internship-Tested Standards: Practical experience delivering responsive layouts and clean modular code.</span>
+                    </div>
+                    <div class="trust-assurance-item">
+                      <span class="trust-check-icon">✓</span>
+                      <span>Full Code Ownership: Complete source files, Git history, and clean deployment handover.</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div class="contact-return-wrap font-mono">
@@ -7355,17 +7684,42 @@
          ==================================================================== */
       function initContact() {
         const copyBtn = $('#copyEmail');
-        copyBtn.addEventListener('click', async () => {
-          await copyText(profile.socials.email);
-          copyBtn.textContent = '✓ COPIED';
-          setTimeout(() => { copyBtn.textContent = 'COPY EMAIL'; }, 2000);
-        });
+        if (copyBtn) {
+          copyBtn.addEventListener('click', async () => {
+            await copyText(profile.socials.email);
+            copyBtn.textContent = '✓ COPIED';
+            setTimeout(() => { copyBtn.textContent = 'COPY EMAIL'; }, 2000);
+          });
+        }
 
+        // Support dynamic mailto customization based on clicked service
+        const emailBtn = $('#composeEmailBtn');
+        const serviceButtons = $$('.service-action-btn[data-service]');
+
+        serviceButtons.forEach((btn) => {
+          btn.addEventListener('click', () => {
+            const serviceName = btn.dataset.service || 'Web Development';
+            const subject = encodeURIComponent(`Project Inquiry — ${serviceName}`);
+            const body = encodeURIComponent(
+              `Hi Dhrumil,
+
+I am reaching out regarding a potential ${serviceName} project.
+
+1. Project Type: ${serviceName}
+2. Brief Description & Goals:
+3. Expected Timeline:
+4. Approximate Budget (if available):
+5. Design References or Links:
+
+Thank you!`
+            );
+            if (emailBtn) {
+              emailBtn.href = `mailto:${profile.socials.email}?subject=${subject}&body=${body}`;
+            }
+          });
+        });
       }
 
-      /* ====================================================================
-         BOOT SCREEN
-         ==================================================================== */
       function initBoot(onDone) {
         const boot = $('#boot');
         let seen = false;
