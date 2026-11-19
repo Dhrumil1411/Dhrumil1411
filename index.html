@@ -2499,6 +2499,115 @@
 
 
     /* ---- components/Projects/Projects.css ---- */
+
+    /* Project Status Badges & Screenshot Frame */
+    .project-ref-wrap {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .project-status-badge {
+      font-size: 0.63rem;
+      font-weight: 800;
+      padding: 2px 7px;
+      letter-spacing: 0.05em;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      line-height: 1.2;
+    }
+
+    .project-status-badge.status-completed {
+      background-color: rgba(30, 107, 74, 0.12);
+      color: var(--bp-accent-green);
+      border: 1px solid var(--bp-accent-green);
+    }
+
+    .project-status-badge.status-prototype {
+      background-color: rgba(184, 80, 24, 0.12);
+      color: #B85018;
+      border: 1px solid #B85018;
+    }
+
+    .project-status-badge .status-dot {
+      font-size: 0.5rem;
+      line-height: 1;
+    }
+
+    .project-screenshot-window {
+      background-color: var(--bp-bg-card);
+      border: 1.5px solid var(--bp-ink);
+      box-shadow: 3px 3px 0px rgba(13, 13, 13, 0.15);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+    }
+
+    .project-preview-container:hover .project-screenshot-window {
+      transform: translateY(-2px);
+      box-shadow: 4px 4px 0px rgba(13, 13, 13, 0.25);
+    }
+
+    .project-screenshot-frame {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      background-color: #0c111d;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .project-screenshot-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .project-preview-container:hover .project-screenshot-img {
+      transform: scale(1.02);
+    }
+
+    .modal-screenshot-frame {
+      border: 1.5px solid var(--bp-ink);
+      margin-bottom: 16px;
+      background-color: #0c111d;
+      overflow: hidden;
+      box-shadow: 4px 4px 0px rgba(13, 13, 13, 0.15);
+    }
+
+    .modal-screenshot-img {
+      width: 100%;
+      max-height: 420px;
+      object-fit: contain;
+      background-color: #0c111d;
+      display: block;
+    }
+
+    .medical-disclaimer-box {
+      background-color: rgba(184, 80, 24, 0.08);
+      border: 1.5px dashed #B85018;
+      padding: 10px 14px;
+      margin-top: 10px;
+      font-size: 0.75rem;
+      line-height: 1.45;
+      color: var(--bp-ink);
+    }
+
+    .disclaimer-badge {
+      font-weight: 800;
+      color: #B85018;
+      margin-right: 6px;
+      display: inline-block;
+      letter-spacing: 0.04em;
+    }
+
     /* Featured Projects Styles — Enhanced Blueprint Architecture */
     .projects-grid {
       display: grid;
@@ -5114,7 +5223,7 @@
             </div>
             <div class="section-title-wrap">
               <h2 class="section-main-title font-display">FEATURED PROJECTS</h2>
-              <div class="section-meta-tag font-mono">4 SELECTED CODEBASES</div>
+              <div class="section-meta-tag font-mono">6 SELECTED CODEBASES</div>
             </div>
           </div>
 
@@ -5442,14 +5551,47 @@
 
     const featuredProjects = [
       {
-        id: "doctor-diagnosis-assistant",
+        id: "web-chat-app",
         ref: "PROJECT_01",
         chapter: "04.1",
+        title: "Web Chat App",
+        subtitle: "Real-Time Messaging Application",
+        tagline: "Full-Stack / Real-Time Web",
+        status: "COMPLETED",
+        statusClass: "completed",
+        screenshot: "assets/screenshots/web-chat-app.png",
+        description: "Modern real-time messaging application supporting instant direct messaging, group conversation channels, live presence detection, and fluid spring-physics transitions powered by Framer Motion.",
+        fullDescription: "A modern, responsive real-time web chat application engineered with instant bi-directional data flow. The project originated as a proof-of-concept during a web development internship at Rao Information Technology, and was subsequently rebuilt from the ground up by Dhrumil into an independent, modular React and Vite application with persistent channel states and smooth Framer Motion micro-interactions.",
+        keyHighlights: [
+          "Instant real-time message broadcasting and online presence detection powered by Firebase Realtime Database.",
+          "Independent modern rewrite: rebuilt from initial internship prototype into a modern modular React + Vite codebase.",
+          "Channel management with dynamic participant indicators, unread message tracking, and message timestamps.",
+          "Smooth spring-physics UI interactions and gesture animations using Framer Motion."
+        ],
+        architecture: "React + Vite Client → Firebase Realtime Database Sync → Auth Provider → State Management → Framer Motion",
+        tech: ["React", "Vite", "Firebase RTDB", "Tailwind CSS", "Framer Motion"],
+        techCategories: {
+          frontend: ["React", "Vite", "Tailwind CSS", "Framer Motion"],
+          realtime: ["Firebase Realtime Database", "Firebase Auth"],
+          architecture: ["Component Modularization", "State Hooks", "Responsive Layouts"]
+        },
+        github: "https://github.com/Dhrumil1411/Web_Chat_App",
+        type: "Full-Stack Web App",
+        originNote: "Initial prototype built during Web Development Internship at Rao Information Technology using HTML, CSS, Bootstrap, JavaScript, and Firebase; subsequently rewritten and expanded into an independent, modern React + Vite architecture."
+      },
+      {
+        id: "doctor-diagnosis-assistant",
+        ref: "PROJECT_02",
+        chapter: "04.2",
         title: "Doctor Diagnosis Assistant",
         subtitle: "Clinical Decision Support Platform",
-        tagline: "AI / Healthcare Informatics",
-        description: "Clinical decision support system featuring dual-inference diagnostic predictions with local scikit-learn models, standardized Human Phenotype Ontology symptom mapping, and automated LLM provider fallback.",
+        tagline: "Full-Stack / Healthcare Informatics",
+        status: "RESEARCH PROTOTYPE",
+        statusClass: "prototype",
+        screenshot: "assets/screenshots/doctor-diagnosis-assistant.png",
+        description: "Clinical decision support system featuring dual-inference diagnostic predictions with local Scikit-Learn models, standardized Human Phenotype Ontology symptom mapping, and automated LLM provider fallback.",
         fullDescription: "An intelligent clinical decision support platform engineered to assist medical professionals during initial patient triage. The system ingests clinical symptoms, maps them to standardized Human Phenotype Ontology (HPO) terms, and runs high-speed local inference using trained Scikit-Learn models, falling back to external LLM providers when multi-modal or complex differential diagnosis is needed.",
+        medicalDisclaimer: "Research and decision-support prototype. Designed for educational exploration and not clinically validated for independent production medical diagnosis.",
         keyHighlights: [
           "Dual-inference engine: prioritized local Scikit-Learn classifiers with automated LLM fallback for rare symptom complexes.",
           "Human Phenotype Ontology (HPO) tokenization and normalization pipeline to standardize non-clinical symptom inputs.",
@@ -5465,90 +5607,121 @@
           database: ["PostgreSQL"]
         },
         github: "https://github.com/Dhrumil1411/Doctor-Diagnosis-Assistant",
-        type: "Full-Stack AI Application"
+        type: "Full-Stack AI Application (Research Prototype)"
+      },
+      {
+        id: "nested-tic-tac-toe",
+        ref: "PROJECT_03",
+        chapter: "04.3",
+        title: "Nested Tic-Tac-Toe",
+        subtitle: "Multiplayer Strategic Grid Engine",
+        tagline: "WebSockets / Game Logic / Node.js",
+        status: "COMPLETED",
+        statusClass: "completed",
+        screenshot: "assets/screenshots/nested-tic-tac-toe.png",
+        description: "Real-time strategic multiplayer game (Ultimate Tic-Tac-Toe) built with Node.js and Socket.IO, where each move on an inner 3x3 board dictates the opponent's active sector on the outer meta-grid.",
+        fullDescription: "A full-stack multiplayer implementation of Ultimate Tic-Tac-Toe engineered for real-time web browsers. Players face off across a 3x3 meta-grid containing nine individual mini tic-tac-toe boards. The game enforces strict recursive win mechanics: your opponent's move in an inner cell dictates exactly which outer board you must play next. Features real-time WebSocket room creation, shareable invite codes, live turn broadcasts, and authoritative server-side board validation.",
+        keyHighlights: [
+          "Full recursive Ultimate Tic-Tac-Toe rules engine with authoritative server-side turn & win verification.",
+          "Real-time bi-directional room matchmaking and state synchronization using Node.js and Socket.IO.",
+          "Retro arcade-inspired visual layout with dynamic board highlighting, score tracking, and instant board state updates.",
+          "Lightweight zero-dependency client architecture written in vanilla ES6+ JavaScript and responsive CSS."
+        ],
+        architecture: "Client Browser (DOM / ES6) ↔ Socket.IO WebSocket Channel ↔ Node.js & Express Room Server ↔ Game State Engine (Authoritative Validation)",
+        tech: ["Node.js", "Express", "Socket.IO", "JavaScript (ES6+)", "CSS3 Grid"],
+        techCategories: {
+          frontend: ["JavaScript (ES6+)", "CSS3 Grid & Flexbox", "Audio/SFX Hooks"],
+          backend: ["Node.js", "Express", "Socket.IO"],
+          game_engine: ["Recursive Win Matrix", "Room Session State", "Move Validation"]
+        },
+        github: "https://github.com/Dhrumil1411/Nested_Tic_Tac_Toe",
+        type: "Real-Time Multiplayer Web App"
+      },
+      {
+        id: "kl-subject-code-replacer",
+        ref: "PROJECT_04",
+        chapter: "04.4",
+        title: "KL Subject Code Replacer",
+        subtitle: "ERP Timetable & Attendance Enhancer",
+        tagline: "Browser Extension / DOM Automation",
+        status: "COMPLETED",
+        statusClass: "completed",
+        screenshot: "assets/screenshots/kl-subject-code-replacer.png",
+        description: "Production Chrome extension (Manifest V3) that parses cryptic timetable cells on KL University's ERP into formatted visual course cards with live 85% attendance safety and bunk calculators.",
+        fullDescription: "A browser extension engineered to enhance student workflows on KL University's ERP portal (newerp.kluniversity.in). The extension monitors dynamic DOM mutations via MutationObserver to locate cryptic course codes and transforms them into clean visual timetable cards with color-coded session pills, prominent room indicators, and multi-hour block unification. Also includes a real-time 85% attendance safety calculator that computes exact allowed absences or makeup requirements without transmitting or storing student data.",
+        keyHighlights: [
+          "Manifest V3 Chrome Extension architecture with isolated content scripts and dynamic popup interface.",
+          "Asynchronous DOM transformation using MutationObserver to seamlessly handle client-rendered ERP tables.",
+          "Built-in 85% Attendance Safety & Bunk Calculator with real-time class threshold projections.",
+          "Zero-telemetry privacy design: runs 100% locally in the browser with no tracking or credential collection."
+        ],
+        architecture: "ERP Portal DOM ↔ Chrome Extension Content Script (MutationObserver) ↔ Course Code Dictionary Mapping ↔ Real-time Visual Card & Calculator Injection",
+        tech: ["JavaScript (ES6+)", "Chrome Extensions (MV3)", "DOM MutationObserver", "CSS3", "JSON"],
+        techCategories: {
+          extension_core: ["Chrome Extensions MV3", "Content Scripts", "Popup Action"],
+          dom_engine: ["MutationObserver", "DOM Injection", "Dynamic Styling"],
+          logic: ["Course Mapping Engine", "85% Attendance Calculator", "Privacy Sandbox"]
+        },
+        github: "https://github.com/Dhrumil1411/KL-Subject-Code-Replacer",
+        type: "Browser Extension (Manifest V3)"
       },
       {
         id: "modicam",
-        ref: "PROJECT_02",
-        chapter: "04.2",
+        ref: "PROJECT_05",
+        chapter: "04.5",
         title: "ModiCam",
         subtitle: "Real-Time AI Virtual Camera Pipeline",
-        tagline: "Computer Vision / Deep Learning",
-        description: "Real-time AI video application performing deep learning face detection and swapping with adaptive FPS acceleration, streaming directly into OBS, Zoom, and Discord as a virtual camera.",
-        fullDescription: "A high-performance computer vision pipeline and virtual camera engine that processes live video frames in real time. It utilizes deep convolutional networks for face detection, 68-point facial landmark tracking, and seamless face transformation via ONNX Runtime, outputting directly to operating system virtual camera feeds for seamless integration into OBS, Discord, and Google Meet.",
+        tagline: "Computer Vision / Video Processing",
+        status: "COMPLETED",
+        statusClass: "completed",
+        screenshot: null,
+        description: "Real-time computer vision desktop pipeline that performs facial landmark tracking and identity transformation, streaming processed video frames into Zoom, OBS, and Discord as a virtual webcam.",
+        fullDescription: "A real-time computer vision application and virtual camera utility that captures live video frames from a physical webcam, executes facial landmark detection and transformation via InsightFace and ONNX Runtime, and streams the synthesized video into operating-system level virtual camera sinks via PyVirtualCam for direct use in conferencing tools like Zoom, OBS, and Discord.",
         keyHighlights: [
-          "Real-time video pipeline capable of sustained 30+ FPS processing with multi-threaded frame capture.",
-          "Accelerated neural network inference using ONNX Runtime with CPU and GPU execution providers.",
-          "Direct OS-level virtual camera integration using PyVirtualCam for driverless video piping to Zoom, OBS, and Discord.",
-          "Adaptive frame skipping and landmark caching algorithm to prevent dropped frames under high system loads."
+          "Live video processing pipeline integrating OpenCV camera capture with multi-threaded frame handling.",
+          "Neural network inference acceleration utilizing ONNX Runtime for facial landmark tracking.",
+          "Direct OS virtual camera piping through PyVirtualCam for seamless integration with OBS and video conferencing.",
+          "Adaptive frame-skipping mechanism to maintain responsive video output under varying CPU/GPU loads."
         ],
-        architecture: "Webcam Hardware Capture (OpenCV) → Multi-threaded Buffer → Deep Learning Detection & 2D/3D Landmark Alignment (InsightFace / ONNX) → Frame Synthesis → OS Virtual Camera Sink (PyVirtualCam)",
+        architecture: "Webcam Hardware Capture (OpenCV) → Multi-threaded Buffer → Facial Landmark Alignment (InsightFace / ONNX) → Frame Synthesis → OS Virtual Camera Sink (PyVirtualCam)",
         tech: ["Python", "OpenCV", "InsightFace", "ONNX Runtime", "PyVirtualCam"],
         techCategories: {
           core: ["Python", "OpenCV", "PyVirtualCam"],
-          deep_learning: ["InsightFace", "ONNX Runtime", "CUDA Acceleration"],
-          pipeline: ["Multi-threaded Buffering", "Virtual Video Driver"]
+          deep_learning: ["InsightFace", "ONNX Runtime"],
+          pipeline: ["Multi-threaded Buffering", "OS Virtual Camera Driver"]
         },
         github: "https://github.com/Dhrumil1411/ModiCam",
-        type: "Computer Vision Pipeline"
+        type: "Computer Vision Desktop Pipeline"
       },
       {
         id: "blood-camp-finder",
-        ref: "PROJECT_03",
-        chapter: "04.3",
+        ref: "PROJECT_06",
+        chapter: "04.6",
         title: "Blood Camp Finder V3.1",
         subtitle: "Cross-Platform Mobile Application",
-        tagline: "Mobile / Cloud / Geolocation",
-        description: "Cross-platform mobile application and coordinator portal for discovering live donation drives, tracking regional blood bank inventories, and broadcasting emergency donor alerts in real time.",
-        fullDescription: "A comprehensive cross-platform mobile solution and coordinator portal built to solve blood shortages and streamline donation drive logistics. Donors can discover nearby verified camps on interactive maps, view live inventory levels for all blood groups (A+, B+, O+, AB-, etc.), and receive push alerts for urgent regional donation requests.",
+        tagline: "Mobile / Geolocation / Cloud",
+        status: "PROTOTYPE",
+        statusClass: "prototype",
+        screenshot: null,
+        description: "Cross-platform mobile application and coordinator portal prototype for discovering live donation drives, tracking regional blood bank inventories, and viewing nearby donation centers.",
+        fullDescription: "A cross-platform mobile application prototype built with Flutter and Firebase designed to streamline blood donation discovery. The application features interactive OpenStreetMap geolocation to help donors locate nearby donation camps, check real-time blood stock availability across different blood groups, and access coordinator contact details.",
         keyHighlights: [
-          "Geolocation search and radius filtering with interactive OpenStreetMap integration.",
+          "Interactive OpenStreetMap geolocation and radius filtering to locate nearby donation drives.",
           "Real-time blood stock tracking and inventory visualization using FL Chart.",
-          "Emergency broadcast system notifying eligible registered donors within immediate geographic proximity.",
-          "Role-based authentication dividing regular donors from verified hospital and camp coordinators."
+          "Cross-platform mobile codebase developed with Flutter and Dart for Android and iOS.",
+          "Firebase Authentication and Cloud Firestore backend integration for donor profiles."
         ],
-        architecture: "Flutter Mobile App (iOS/Android) → Firebase Authentication → Cloud Firestore Realtime Sync → Geolocation API (OpenStreetMap) → Push Notification Hub",
+        architecture: "Flutter Mobile Client (Dart) → Firebase Authentication → Cloud Firestore Sync → OpenStreetMap Geolocation API → FL Chart Visualizer",
         tech: ["Flutter", "Dart", "Firebase", "OpenStreetMap", "FL Chart"],
         techCategories: {
           mobile: ["Flutter", "Dart"],
-          backend: ["Firebase Auth", "Cloud Firestore", "Cloud Functions"],
+          backend: ["Firebase Auth", "Cloud Firestore"],
           mapping_viz: ["OpenStreetMap", "FL Chart"]
         },
         github: "https://github.com/Dhrumil1411/Blood-Camp-Finder-V3.1",
-        type: "Cross-Platform Mobile App"
-      },
-      {
-        id: "web-chat-app",
-        ref: "PROJECT_04",
-        chapter: "04.4",
-        title: "Web Chat App",
-        subtitle: "Real-Time Messaging Application",
-        tagline: "Real-Time Web / WebSocket",
-        description: "Modern messaging application supporting instant direct messages, group conversation channels, unread message tracking, and fluid spring-physics transitions powered by Framer Motion.",
-        fullDescription: "A modern, responsive real-time web chat application engineered with instant bi-directional data flow. The project originated during an internship as a vanilla JavaScript and Firebase proof-of-concept, and was subsequently rebuilt from the ground up by Dhrumil into an independent, modular React and Vite application with rich transitions and persistent channel states.",
-        keyHighlights: [
-          "Instant real-time message broadcasting and presence detection powered by Firebase Realtime Database.",
-          "Independent re-architecture: rebuilt from initial internship prototype into a modern modular React + Vite codebase.",
-          "Smooth spring-physics UI interactions and gesture animations using Framer Motion.",
-          "Comprehensive channel management, direct messaging, active presence indicators, and message timestamps."
-        ],
-        architecture: "React + Vite Client → Firebase Realtime Database Sync → Auth Provider → State Management → Framer Motion Animation Engine",
-        tech: ["React", "Vite", "Firebase RTDB", "Tailwind CSS", "Framer Motion"],
-        techCategories: {
-          frontend: ["React", "Vite", "Tailwind CSS", "Framer Motion"],
-          realtime: ["Firebase Realtime Database", "Firebase Auth"],
-          architecture: ["Component Modularization", "State Hooks"]
-        },
-        github: "https://github.com/Dhrumil1411/Web_Chat_App",
-        type: "Reactive Web System",
-        originNote: "Initial prototype built during Web Development Internship at Rao Information Technology using HTML, CSS, Bootstrap, JavaScript, and Firebase; subsequently rewritten and expanded into an independent, modern React + Vite architecture."
+        type: "Cross-Platform Mobile App (Prototype)"
       }
     ];
-
-    /**
-     * Dhrumil Dashadia — Technical Skills
-     * Simplified, compact categories based on verified repository evidence.
-     */
 
     const skillsData = [
       {
@@ -5639,7 +5812,7 @@
       /* ====================================================================
          RENDER: PROJECTS + SKILLS (data driven)
          ==================================================================== */
-      function renderPreview(proj) {
+      function renderPipeline(proj) {
         const steps = proj.architecture ? proj.architecture.split(' → ') : [];
         return `
       <div class="system-pipeline-window font-mono" title="${esc(proj.title)} System Architecture Schematic">
@@ -5681,12 +5854,42 @@
       </div>`;
       }
 
+      function renderPreview(proj) {
+        if (proj.screenshot) {
+          return `
+      <div class="project-screenshot-window font-mono" title="${esc(proj.title)} Live Interface Preview">
+        <div class="pipeline-titlebar">
+          <div class="titlebar-left">
+            <span class="window-dots">● ● ●</span>
+            <span class="window-path">${esc(proj.ref)} // APP INTERFACE</span>
+          </div>
+          <div class="titlebar-right">
+            <span class="pipeline-type text-accent-blue font-bold">${esc(proj.type.toUpperCase())}</span>
+          </div>
+        </div>
+        <div class="project-screenshot-frame">
+          <img src="${esc(proj.screenshot)}" alt="${esc(proj.title)} interface preview" class="project-screenshot-img" loading="lazy" />
+        </div>
+        <div class="pipeline-footer">
+          <span class="footer-lead">KEY STACK:</span>
+          <span class="footer-tech">${esc(proj.tech.slice(0, 4).join(' • '))}</span>
+        </div>
+      </div>`;
+        }
+        return renderPipeline(proj);
+      }
+
       function renderProjects() {
         $('#projectsGrid').innerHTML = featuredProjects.map((proj, idx) => `
       <div class="project-grid-item" data-ac data-distance="28" data-delay="${(idx * 0.08).toFixed(2)}" data-duration="0.65">
         <div class="chamfer-card project-card">
           <div class="project-top-strip font-mono">
-            <span class="project-ref">${esc(proj.ref)}</span>
+            <div class="project-ref-wrap">
+              <span class="project-ref">${esc(proj.ref)}</span>
+              <span class="project-status-badge status-${esc(proj.statusClass || 'completed')}">
+                <span class="status-dot">●</span> ${esc(proj.status)}
+              </span>
+            </div>
             <span class="project-tagline text-accent-blue">${esc(proj.tagline)}</span>
           </div>
 
@@ -5704,10 +5907,16 @@
               ${proj.tech.map((t) => `<span class="tech-pill">${esc(t)}</span>`).join('')}
             </div>
 
+            ${proj.medicalDisclaimer ? `
+              <div class="medical-disclaimer-box font-mono">
+                <span class="disclaimer-badge">DISCLAIMER:</span>
+                <span>${esc(proj.medicalDisclaimer)}</span>
+              </div>` : ''}
+
             ${proj.originNote ? `
               <div class="project-origin-strip font-mono">
                 <span class="origin-label">ORIGIN NOTE:</span>
-                <span class="origin-text">Initial prototype developed during Web Development Internship at Rao Information Technology; subsequently expanded independently into modern React architecture.</span>
+                <span class="origin-text">${esc(proj.originNote)}</span>
               </div>` : ''}
           </div>
 
@@ -5785,6 +5994,9 @@
         <div class="modal-header-strip font-mono">
           <div class="modal-header-left">
             <span class="modal-ref-badge">${esc(project.ref)}</span>
+            <span class="project-status-badge status-${esc(project.statusClass || 'completed')}">
+              <span class="status-dot">●</span> ${esc(project.status)}
+            </span>
             <span class="modal-chap-tag">CH.${esc(project.chapter)} // SPECIFICATION</span>
           </div>
           <div class="modal-header-right">
@@ -5800,13 +6012,24 @@
           </div>
 
           <div class="modal-preview-wrapper">
-            <div class="preview-label font-mono">// INTERFACE ARCHITECTURE PREVIEW</div>
-            ${renderPreview(project)}
+            <div class="preview-label font-mono">// INTERFACE &amp; ARCHITECTURE VIEW</div>
+            ${project.screenshot ? `
+              <div class="modal-screenshot-frame">
+                <img src="${esc(project.screenshot)}" alt="${esc(project.title)} user interface" class="modal-screenshot-img" />
+              </div>
+            ` : ''}
+            ${renderPipeline(project)}
           </div>
 
           <div class="modal-section-block">
             <h4 class="modal-section-heading font-mono">// SYSTEM OVERVIEW</h4>
             <p class="modal-narrative-text">${esc(project.fullDescription || project.description)}</p>
+            ${project.medicalDisclaimer ? `
+              <div class="medical-disclaimer-box font-mono">
+                <span class="disclaimer-badge">MEDICAL DISCLAIMER:</span>
+                <span>${esc(project.medicalDisclaimer)}</span>
+              </div>
+            ` : ''}
           </div>
 
           ${project.architecture ? `
